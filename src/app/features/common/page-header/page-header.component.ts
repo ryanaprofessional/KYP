@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './page-header.component.scss'
 })
 export class PageHeaderComponent {
-@Input() pageName: string = 'This page';
+@Input() pageName: string = 'KYP';
 }
