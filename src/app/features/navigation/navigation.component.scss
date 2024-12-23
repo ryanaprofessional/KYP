@@ -1,0 +1,16 @@
+@use 'mixins';
+
+@include mixins.mobile {
+    .desktop-navigation {
+        display: none
+    }
+    .mobile-navigation {
+        display: block
+    }
+}
+
+@include mixins.tabletUp {
+    .mobile-navigation {
+        display: none
+    }
+}
