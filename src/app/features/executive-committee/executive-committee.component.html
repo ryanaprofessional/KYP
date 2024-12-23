@@ -1,15 +1,9 @@
-<!-- <div *ngFor="let card of cards">
-    <mat-card class="example-card" appearance="outlined">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{ card.label }}</mat-card-title>
-            <mat-card-subtitle>{{ card.subLabel }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image [src]="card.subLabel">
-        <mat-card-content>
-            <p>
-                {{ card.text }}
-            </p>
-        </mat-card-content>
-    </mat-card>
-</div> -->
+<kyp-sub-heading text="Executive Committee"/>
+
+
+    <kyp-card
+    *ngFor="let item of items"
+    [title]="item.name"
+    [content]="item.content"
+    [imageUrl]="item.imageUrl"
+  ></kyp-card>
