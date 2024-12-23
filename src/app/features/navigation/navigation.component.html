@@ -4,14 +4,12 @@
 </mat-toolbar>
 
 <mat-toolbar class="mobile-navigation">
-
   <span>Kentucky Party</span>
   <button mat-button [matMenuTriggerFor]="menu" class="mobile-navigation">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
 
   </button>
-  <mat-menu #menu="matMenu">
+  <mat-menu #menu="matMenu" class="mobile-menu">
     <a *ngFor="let item of menuItems" [routerLink]="item.link" mat-button>{{ item.label }}</a>
-    
   </mat-menu>
 </mat-toolbar>
