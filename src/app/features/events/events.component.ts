@@ -6,6 +6,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import { PageHeaderComponent } from '../common/page-header/page-header.component';
 
 
 @Component({
@@ -16,7 +17,7 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-  CommonModule],
+  CommonModule, PageHeaderComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })
