@@ -1,16 +1,78 @@
 @use 'mixins';
 
-@include mixins.mobile {
-    .desktop-navigation {
-        display: none
+/* Base styles */
+.navigation {
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown only on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+  }
+  
+  .hamburger-bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+  }
+  
+  /* Menu styles */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @include mixins.mobile {
+    .hamburger {
+      display: flex; 
     }
-    .mobile-navigation {
-        display: flex;
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
     }
-}
-
-@include mixins.tabletUp {
-    .mobile-navigation {
-        display: none;
+  
+    .menu.menu-open {
+      display: flex; 
     }
-}
+  }
+  

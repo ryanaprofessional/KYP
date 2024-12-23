@@ -25,4 +25,11 @@ export class NavigationComponent {
     { label: 'Donate', link: '/donate' }
   ];
 
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }

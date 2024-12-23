@@ -1,15 +1,16 @@
-<mat-toolbar class="desktop-navigation">
-  <span>Kentucky Party</span>
-  <a *ngFor="let item of menuItems" [routerLink]="item.link" mat-button>{{ item.label }}</a>
-</mat-toolbar>
+<nav class="navigation">
+  <div class="menu-header">
+    <span class="brand">The Kentucky Party</span>
+    <button class="hamburger" (click)="toggleMenu()">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
 
-<mat-toolbar class="mobile-navigation">
-  <span>Kentucky Party</span>
-  <button mat-button [matMenuTriggerFor]="menu" class="mobile-navigation">
-    <mat-icon aria-hidden="false" fontIcon="menu"></mat-icon>
-
-  </button>
-  <mat-menu #menu="matMenu" class="mobile-menu">
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" mat-button>{{ item.label }}</a>
-  </mat-menu>
-</mat-toolbar>
+  <ul class="menu" [class.menu-open]="isMenuOpen">
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <a [routerLink]="item.link" class="menu-link" (click)="isMenuOpen = false">{{ item.label }}</a>
+    </li>
+  </ul>
+</nav>
