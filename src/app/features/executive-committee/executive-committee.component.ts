@@ -10,11 +10,12 @@ import { SubHeadingComponent } from '../common/sub-heading/sub-heading.component
   styleUrl: './executive-committee.component.scss'
 })
 export class ExecutiveCommitteeComponent {
- items = [{name: 'Geoff Young', content: 'Chair', imageUrl: ''},
+ items = [{name: 'Geoff Sebesta', content: 'Chair', imageUrl: ''},
   {name: 'Evy Tomboly', content: 'Vice Chair', imageUrl: ''},
   {name: 'Geoff Young', content: 'Treasurer', imageUrl: ''},
   {name: 'Ryan Anderson', content: 'Secretary', imageUrl: ''},
   {name: 'Shauna Rudd', content: 'Committee Member', imageUrl: ''},
-  {name: 'Mikael Malone', content: 'Committee Member', imageUrl: ''}
+  {name: 'Mikael Malone', content: 'Committee Member', imageUrl: ''},
+  {name: 'Open Position', content: 'Committee Member', imageUrl: ''}
  ]
 }
