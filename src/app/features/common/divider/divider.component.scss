@@ -1,0 +1,30 @@
+.custom-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+  
+    .line {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, #ddd, #000, #ddd);
+      margin: 0 0.5rem;
+    }
+  
+    .icon {
+      font-size: 1.5rem;
+      color: #555;
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .custom-divider .icon {
+      font-size: 1rem;
+    }
+  
+    .custom-divider .line {
+      height: 1px;
+    }
+  }
+  
