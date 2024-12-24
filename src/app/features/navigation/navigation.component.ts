@@ -21,8 +21,9 @@ export class NavigationComponent {
     { label: 'About', link: '/about' },
     { label: 'Contact', link: '/contact' },
     { label: 'Events', link: '/events' },
+    { label: 'Resources', link: '/resources'},
     { label: 'Store', link: '/store' },
-    { label: 'Donate', link: '/donate' }
+    { label: 'Donate', link: '/donate' },
   ];
 
 

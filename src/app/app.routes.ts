@@ -6,6 +6,7 @@ import { ExecutiveCommitteeComponent } from './features/executive-committee/exec
 import { VisionCommitteeComponent } from './features/vision-committee/vision-committee.component';
 import { StoreComponent } from './features/store/store.component';
 import { DonateComponent } from './features/donate/donate.component';
+import { ResourcesComponent } from './features/resources/resources.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'executive-committee', component: ExecutiveCommitteeComponent },
     { path: 'vision-committee', component: VisionCommitteeComponent },
     { path: 'store', component: StoreComponent },
-    { path: 'donate', component: DonateComponent }
+    { path: 'donate', component: DonateComponent },
+    { path: 'resources', component: ResourcesComponent }
 ];
