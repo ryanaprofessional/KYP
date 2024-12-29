@@ -1,0 +1,25 @@
+<div class="custom-accordion">
+    <div 
+      class="custom-panel" 
+      *ngFor="let item of items" 
+      (click)="togglePanel(item)" 
+      [class.open]="item?.isOpen">
+      <div class="custom-panel-header">
+        <div class="custom-panel-title">{{ item.label }}</div>
+        <div class="custom-panel-sub-label">{{ item.subLabel }}</div>
+        <div class="icon">
+
+            <div *ngIf="item.isOpen; else itemClosed">
+                <mat-icon aria-hidden="false" aria-label="caret" fontIcon="keyboard_arrow_up"></mat-icon>
+            </div>
+            
+            <ng-template #itemClosed>
+                <mat-icon aria-hidden="false" aria-label="caret" fontIcon="keyboard_arrow_down"></mat-icon>
+            </ng-template>
+        </div>
+    </div>
+      <div class="custom-panel-content" *ngIf="item.isOpen">
+        <p>{{ item.text }}</p>
+      </div>
+    </div>
+  </div>

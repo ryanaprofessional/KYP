@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 import { ButtonComponent } from '../common/button/button.component';
 import { DividerComponent } from '../common/divider/divider.component';
+import { CollapsibleComponent } from '../common/collapsible/collapsible.component';
 
 
 @Component({
@@ -20,7 +21,7 @@ import { DividerComponent } from '../common/divider/divider.component';
     MatInputModule,
     MatDatepickerModule,
   CommonModule, PageHeaderComponent,
-  ButtonComponent, DividerComponent],
+  ButtonComponent, DividerComponent, CollapsibleComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })

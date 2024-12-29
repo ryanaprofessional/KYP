@@ -4,15 +4,7 @@
   Check out our upcoming events below and get involved today!
   <kyp-button label="Contact" (click)="onContactButtonClick()"></kyp-button>
 </p>
+
 <kyp-divider/>
-  <mat-accordion>
-    <mat-expansion-panel *ngFor="let item of items" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-      <mat-expansion-panel-header>
-        <mat-panel-title> {{ item.label }} </mat-panel-title>
-        <mat-panel-description>
-          {{ item.subLabel }}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>{{ item.text}}</p>
-    </mat-expansion-panel>
-  </mat-accordion>
+
+<kyp-collapsible [items]="items"/>
