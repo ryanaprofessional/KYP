@@ -4,6 +4,13 @@
 .navigation {
     background-color: #f8f9fa;
     padding: 1rem;
+    margin-bottom: 10px;
+    opacity: 100;
+    box-shadow: 0 4px 2px -2px gray;
+    border-radius: 0px 0px 25px 25px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
   }
   
   .menu-header {
