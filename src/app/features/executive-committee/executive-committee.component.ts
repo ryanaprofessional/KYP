@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../common/card/card.component';
 import { CommonModule } from '@angular/common';
-import { SubHeadingComponent } from '../common/sub-heading/sub-heading.component';
 
 @Component({
   selector: 'kyp-executive-committee',
-  imports: [CardComponent, CommonModule, SubHeadingComponent],
+  imports: [CardComponent, CommonModule],
   templateUrl: './executive-committee.component.html',
   styleUrl: './executive-committee.component.scss'
 })
