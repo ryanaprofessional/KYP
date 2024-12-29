@@ -4,10 +4,11 @@ import { ExecutiveCommitteeComponent } from '../executive-committee/executive-co
 import { SubHeadingComponent } from '../common/sub-heading/sub-heading.component';
 import { VisionCommitteeComponent } from '../vision-committee/vision-committee.component';
 import { DividerComponent } from '../common/divider/divider.component';
+import { ButtonComponent } from '../common/button/button.component';
 
 @Component({
   selector: 'kyp-about',
-  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent],
+  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent, ButtonComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

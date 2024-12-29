@@ -1,11 +1,11 @@
 <kyp-page-header [pageName]="'About KYP'"></kyp-page-header>
 
 <kyp-sub-heading text="ByLaws" />
-<button (click)="openPdf('bylaws')">View</button>
+<kyp-button (click)="openPdf('bylaws')" label="View Bylaws"></kyp-button>
 <p>Ready to see what the Kentucky Party is all about? These bylaws outline a bold vision for political change, putting power in the hands of its members and championing nonviolence, equality, and open participation. From ensuring ballot access to fostering grassroots leadership, the KYP is all about empowering Kentuckians to shape their future. Dive into their commitments to transparency, inclusivity, and dynamic decision-making. Click here to explore how the KYP is redefining politics in the Bluegrass State!</p>
 <kyp-divider/>
 <kyp-sub-heading text="Platform" />
-<button>View</button>
+<kyp-button (click)="openPdf('bylaws')" [disabled]="true" label="View Platform"></kyp-button>
 <p>The Kentucky Party’s platform is a forward-thinking roadmap for progress, built on the pillars of equality, nonviolence, and people-centered governance. They’re committed to ending Kentucky’s role in military expansion, ensuring equal opportunities for all, and amplifying grassroots voices. With a focus on diplomacy, transparency, and sustainability, the KYP offers bold solutions for a fairer Commonwealth. Ready to see how they’re transforming Kentucky’s political landscape? Click here to explore their vision in detail!</p>
 <kyp-divider/>
 <kyp-sub-heading text="Executive Committee" />

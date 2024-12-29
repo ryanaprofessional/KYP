@@ -1,0 +1,15 @@
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: inherit;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+  }
