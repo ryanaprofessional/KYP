@@ -12,5 +12,11 @@ import { DividerComponent } from '../common/divider/divider.component';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
+ private pdfUrl = "https://kentuckyparty-assets.s3.us-east-2.amazonaws.com/KentuckyPartyBylaws.pdf";
 
+ openPdf(pdfToOpen: "bylaws"): void { 
+  if(pdfToOpen == "bylaws") {
+    window.open(this.pdfUrl, "_blank");
+  }
+ }
 }
