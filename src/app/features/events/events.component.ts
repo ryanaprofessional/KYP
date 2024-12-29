@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 import { ButtonComponent } from '../common/button/button.component';
+import { DividerComponent } from '../common/divider/divider.component';
 
 
 @Component({
@@ -19,7 +20,7 @@ import { ButtonComponent } from '../common/button/button.component';
     MatInputModule,
     MatDatepickerModule,
   CommonModule, PageHeaderComponent,
-  ButtonComponent],
+  ButtonComponent, DividerComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })

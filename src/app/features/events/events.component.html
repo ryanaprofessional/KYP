@@ -4,6 +4,7 @@
   Check out our upcoming events below and get involved today!
   <kyp-button label="Contact" (click)="onContactButtonClick()"></kyp-button>
 </p>
+<kyp-divider/>
   <mat-accordion>
     <mat-expansion-panel *ngFor="let item of items" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
       <mat-expansion-panel-header>
