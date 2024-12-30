@@ -1,0 +1,16 @@
+.sub-heading-container {
+    display: flex; /* Enable flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 7rem;
+}
+
+.sub-heading-title {
+    font-size: var(--medium-font-size);
+    width: fit-content; /* No changes needed here */
+}
+
+.sub-heading-text {
+    width: fit-content; /* No changes needed here */
+}

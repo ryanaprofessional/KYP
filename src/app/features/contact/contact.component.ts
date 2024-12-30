@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 import { DividerComponent } from '../common/divider/divider.component';
+import { SubHeadingComponent } from '../common/sub-heading/sub-heading.component';
 
 @Component({
   selector: 'kyp-contact',
-  imports: [CommonModule, PageHeaderComponent, DividerComponent],
+  imports: [CommonModule, PageHeaderComponent, DividerComponent, SubHeadingComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

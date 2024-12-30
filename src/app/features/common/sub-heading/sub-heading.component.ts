@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './sub-heading.component.scss'
 })
 export class SubHeadingComponent {
-@Input() text: string = 'KYP';
+  @Input() title: string = '';
+  @Input() text: string = '';
 }
