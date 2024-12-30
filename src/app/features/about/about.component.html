@@ -1,21 +1,25 @@
 <kyp-page-header [pageName]="'About KYP'"></kyp-page-header>
 <kyp-page-wrapper>
+
     <kyp-sub-heading title="Bylaws"> 
-        <kyp-button (click)="openPdf('bylaws')" label="View Bylaws"></kyp-button>
+    <kyp-button (click)="openPdf('bylaws')" label="View Bylaws"></kyp-button>
     </kyp-sub-heading>
-    <p>Ready to see what the Kentucky Party is all about? These bylaws outline a bold vision for political change, putting power in the hands of its members and championing nonviolence, equality, and open participation. From ensuring ballot access to fostering grassroots leadership, the KYP is all about empowering Kentuckians to shape their future. Dive into their commitments to transparency, inclusivity, and dynamic decision-making. Click here to explore how the KYP is redefining politics in the Bluegrass State!</p>
+    <kyp-read-more [text]="textForBylaws"/>
     <kyp-divider/>
+
     <kyp-sub-heading title="Platform">
         <kyp-button (click)="openPdf('bylaws')" [disabled]="true" label="View Platform"></kyp-button>
     </kyp-sub-heading>
-    <p>The Kentucky Party’s platform is a forward-thinking roadmap for progress, built on the pillars of equality, nonviolence, and people-centered governance. They’re committed to ending Kentucky’s role in military expansion, ensuring equal opportunities for all, and amplifying grassroots voices. With a focus on diplomacy, transparency, and sustainability, the KYP offers bold solutions for a fairer Commonwealth. Ready to see how they’re transforming Kentucky’s political landscape? Click here to explore their vision in detail!</p>
+    <kyp-read-more [text]="textForPlatform"/>
     <kyp-divider/>
+
     <kyp-sub-heading title="Executive Committee" />
-    <p>The Kentucky Party Executive Committee (EC) is the engine driving the party’s mission, ensuring it operates with transparency, accountability, and effectiveness. This seven-member team handles everything from organizing conventions to setting agendas and filling leadership vacancies. They prioritize open communication, monthly meetings, and member-driven decision-making. With a focus on inclusivity and fostering leadership, the EC is dedicated to empowering all Kentuckians.</p>
+    <kyp-read-more [text]="textForEC"/>
     <kyp-executive-committee/>
     <kyp-divider/>
+
     <kyp-sub-heading title="Vision Committee" />
-    <p>The Vision Committee (VC) of the Kentucky Party is where ideas become action, crafting the platform that drives the party forward. Each year, this dynamic group of members gathers to discuss, refine, and vote on the policies that reflect the party’s principles of equality, nonviolence, and people-first governance. Open to all voices, the VC ensures the platform evolves with fresh ideas and member input.</p>
+    <kyp-read-more [text]="textForVC" />
     <kyp-vision-committee/>
 </kyp-page-wrapper>
 <kyp-footer/>
