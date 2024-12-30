@@ -13,5 +13,6 @@ import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.compon
 })
 export class ContactComponent {
 
-  items = [{contactType: 'Email', contactDetails: 'email@email.com'}, {contactType: 'Phone', contactDetails: '888-111-1111'}]
+  items = [{contactType: 'Email', contactDetails: 'thekentuckyparty@gmail.com'}]
+    //, {contactType: 'Phone', contactDetails: '888-111-1111'}]
 }

@@ -4,22 +4,18 @@
     <kyp-sub-heading title="Bylaws"> 
     <kyp-button (click)="openPdf('bylaws')" label="View Bylaws"></kyp-button>
     </kyp-sub-heading>
-    <kyp-read-more [text]="textForBylaws"/>
     <kyp-divider/>
 
     <kyp-sub-heading title="Platform">
         <kyp-button (click)="openPdf('bylaws')" [disabled]="true" label="View Platform"></kyp-button>
     </kyp-sub-heading>
-    <kyp-read-more [text]="textForPlatform"/>
     <kyp-divider/>
 
     <kyp-sub-heading title="Executive Committee" />
-    <kyp-read-more [text]="textForEC"/>
     <kyp-executive-committee/>
     <kyp-divider/>
 
     <kyp-sub-heading title="Vision Committee" />
-    <kyp-read-more [text]="textForVC" />
     <kyp-vision-committee/>
 </kyp-page-wrapper>
 <kyp-footer/>
