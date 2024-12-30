@@ -2,7 +2,7 @@
 
 /* Base styles */
 .navigation {
-    background-color: #fafaf8;
+    background-color: #000066;
     padding: 1rem;
     margin-bottom: 10px;
     opacity: 100;
@@ -12,6 +12,7 @@
     top: 0;
     overflow: hidden;
     z-index: 10;
+    color: rgb(221, 217, 217);
   }
   
   .menu-header {
@@ -36,11 +37,8 @@
     width: 30px;
   }
   
-  .hamburger-bar {
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 3px;
+  .icon {
+    color: white;
   }
   
   /* Menu styles */
@@ -58,7 +56,7 @@
   
   .menu-link {
     text-decoration: none;
-    color: black;
+    color: rgb(221, 217, 217);
     font-weight: bold;
   }
   
