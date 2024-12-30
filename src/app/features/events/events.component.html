@@ -1,10 +1,12 @@
 <kyp-page-header [pageName]="'Events with KYP'"></kyp-page-header>
+<kyp-page-wrapper>
 
-<p>
-  Check out our upcoming events below and get involved today!
-  <kyp-button label="Contact" (click)="onContactButtonClick()"></kyp-button>
-</p>
-
-<kyp-divider/>
-
-<kyp-collapsible [items]="items"/>
+  <kyp-sub-heading text="Check out our upcoming events below and get involved today!" />
+  <p>
+    <kyp-button label="Contact" (click)="onContactButtonClick()"></kyp-button>
+  </p>
+  
+  <kyp-divider/>
+  
+  <kyp-collapsible [items]="items"/>
+</kyp-page-wrapper>

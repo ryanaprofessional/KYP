@@ -10,6 +10,8 @@ import { PageHeaderComponent } from '../common/page-header/page-header.component
 import { ButtonComponent } from '../common/button/button.component';
 import { DividerComponent } from '../common/divider/divider.component';
 import { CollapsibleComponent } from '../common/collapsible/collapsible.component';
+import { SubHeadingComponent } from '../common/sub-heading/sub-heading.component';
+import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
 
 
 @Component({
@@ -21,7 +23,7 @@ import { CollapsibleComponent } from '../common/collapsible/collapsible.componen
     MatInputModule,
     MatDatepickerModule,
   CommonModule, PageHeaderComponent,
-  ButtonComponent, DividerComponent, CollapsibleComponent],
+  ButtonComponent, DividerComponent, CollapsibleComponent, SubHeadingComponent, PageWrapperComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })
