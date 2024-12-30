@@ -1,9 +1,11 @@
 .button {
     padding: 10px 20px;
-    font-size: 16px;
-    border: none;
+    font-size: var(--font-size);
+    font-weight: 700;
     border-radius: 4px;
+    border: 1px solid black;
     cursor: inherit;
+    background-color: var(--button-bg-color) !important;
   }
 
   .pointer {

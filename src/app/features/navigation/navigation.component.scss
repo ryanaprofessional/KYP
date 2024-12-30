@@ -2,7 +2,7 @@
 
 /* Base styles */
 .navigation {
-    background-color: #f8f9fa;
+    background-color: #fafaf8;
     padding: 1rem;
     margin-bottom: 10px;
     opacity: 100;
@@ -11,6 +11,7 @@
     position: sticky;
     top: 0;
     overflow: hidden;
+    z-index: 10;
   }
   
   .menu-header {

@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @use "mixins";
-html, body { height: 100%; }
+html, body { height: 100%; background-color: rgb(248, 249, 242); }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
     --primary-color: #ffec80;
-    --secondary-color: #6c757d;
+    --secondary-color: rgb(248, 249, 242);
+    --button-bg-color: rgb(249, 247, 135);
     --font-size: 16px;
     --large-font-size: 3.125rem;
     --medium-font-size: 2.125rem;
