@@ -1,0 +1,14 @@
+<nav class="navigation">
+  <div class="menu-header">
+    <span class="brand">The Kentucky Party</span>
+    <button class="hamburger" (click)="toggleMenu()">
+      <mat-icon aria-hidden="false" aria-label="Menu Icon" fontIcon="menu" class="icon"></mat-icon>
+    </button>
+  </div>
+
+  <ul class="menu" [class.menu-open]="isMenuOpen">
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <a [routerLink]="item.link" class="menu-link" (click)="isMenuOpen = false">{{ item.label }}</a>
+    </li>
+  </ul>
+</nav>

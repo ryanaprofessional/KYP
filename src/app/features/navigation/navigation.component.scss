@@ -1,0 +1,84 @@
+@use 'mixins';
+
+/* Base styles */
+.navigation {
+    background-color: #000066;
+    padding: 1rem;
+    margin-bottom: 10px;
+    opacity: 100;
+    box-shadow: 0 4px 2px -2px gray;
+    border-radius: 0px 0px 25px 25px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    color: rgb(221, 217, 217);
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown only on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+  }
+  
+  .icon {
+    color: white;
+  }
+  
+  /* Menu styles */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    font-weight: bold;
+  }
+  
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @include mixins.mobile {
+    .hamburger {
+      display: flex; 
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    .menu.menu-open {
+      display: flex; 
+    }
+  }
+  

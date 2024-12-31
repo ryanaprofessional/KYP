@@ -1,0 +1,14 @@
+.header-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--secondary-color);
+    height: 7rem;
+    box-shadow: 0 4px 2px -2px gray;
+    border-radius: 5px;
+}
+
+.header-text {
+    font-size: var(--large-font-size);
+    width: fit-content;
+}

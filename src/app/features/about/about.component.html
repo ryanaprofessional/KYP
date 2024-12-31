@@ -1,0 +1,21 @@
+<kyp-page-header [pageName]="'About KYP'"></kyp-page-header>
+<kyp-page-wrapper>
+
+    <kyp-sub-heading title="Bylaws"> 
+    <kyp-button (click)="openPdf('bylaws')" label="View Bylaws"></kyp-button>
+    </kyp-sub-heading>
+    <kyp-divider/>
+
+    <kyp-sub-heading title="Platform">
+        <kyp-button (click)="openPdf('bylaws')" [disabled]="true" label="View Platform"></kyp-button>
+    </kyp-sub-heading>
+    <kyp-divider/>
+
+    <kyp-sub-heading title="Executive Committee" />
+    <kyp-executive-committee/>
+    <kyp-divider/>
+
+    <kyp-sub-heading title="Vision Committee" />
+    <kyp-vision-committee/>
+</kyp-page-wrapper>
+<kyp-footer/>

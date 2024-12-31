@@ -1,0 +1,18 @@
+.button {
+    padding: 10px 20px;
+    font-size: var(--font-size);
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid rgb(140, 137, 137);
+    cursor: inherit;
+    background-color: var(--button-bg-color) !important;
+    color: black !important;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+  }

@@ -1,0 +1,16 @@
+.footer-container {
+    height: 7rem;
+    background-color: var(--primary-color);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 7rem;
+}
+
+.button-container {
+    color: white;
+    font-weight: 700;
+    width: fit-content;
+    cursor: pointer;
+}
