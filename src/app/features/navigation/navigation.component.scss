@@ -21,9 +21,16 @@
     align-items: center;
   }
   
-  .brand {
+  .brand{
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer; 
+  }
+  
+  .brand:hover{
+    opacity: 0.8; 
   }
   
   .hamburger {
