@@ -7,11 +7,10 @@ import { DividerComponent } from '../common/divider/divider.component';
 import { ButtonComponent } from '../common/button/button.component';
 import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
 import { FooterComponent } from '../footer/footer.component';
-import { ReadMoreComponent } from '../common/read-more/read-more.component';
 
 @Component({
   selector: 'kyp-about',
-  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent, ButtonComponent, PageWrapperComponent, FooterComponent, ReadMoreComponent],
+  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent, ButtonComponent, PageWrapperComponent, FooterComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

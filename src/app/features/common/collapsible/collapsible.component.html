@@ -20,6 +20,8 @@
     </div>
       <div class="custom-panel-content" *ngIf="item.isOpen">
         <p>{{ item.text }}</p>
+        
+        <a *ngIf="item.seeDetailsLink" target="_blank" href="https://www.facebook.com/events/593457133446456/">See details about this event</a>
       </div>
     </div>
   </div>

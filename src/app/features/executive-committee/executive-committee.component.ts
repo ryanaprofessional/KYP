@@ -15,6 +15,6 @@ export class ExecutiveCommitteeComponent {
   {name: 'Ryan Anderson', content: 'Secretary', imageUrl: ''},
   {name: 'Shauna Rudd', content: 'Committee Member', imageUrl: ''},
   {name: 'Mikael Malone', content: 'Committee Member', imageUrl: ''},
-  {name: 'Open Position', content: 'Committee Member', imageUrl: ''}
+  {name: 'Riley Kelly', content: 'Committee Member', imageUrl: ''}
  ]
 }
