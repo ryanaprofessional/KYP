@@ -18,7 +18,7 @@ import { ASSETS_URL } from '../../data/assets';
 export class AboutComponent {
   // need to update to use cloudfront
  private bylawPdfUrl = `${ASSETS_URL}KentuckyPartyBylaws.pdf`;
- private platformPdfUrl = `${ASSETS_URL}KentuckyPartyPlatforms.pdf`;
+ private platformPdfUrl = `${ASSETS_URL}KentuckyPartyPlatform.pdf`;
 
  openPlatformPdf(): void { 
     window.open(this.platformPdfUrl, "_blank");
