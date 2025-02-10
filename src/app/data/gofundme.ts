@@ -1,0 +1,1 @@
+export const GO_FUND_ME_URL="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y";

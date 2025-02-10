@@ -1,1 +1,1 @@
-export const ASSETS_URL = "https://kentuckyparty-assets.s3.us-east-2.amazonaws.com/";
+export const ASSETS_URL = "https://prod-assets.thekentuckyparty.com/";

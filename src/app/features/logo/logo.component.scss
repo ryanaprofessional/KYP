@@ -1,0 +1,23 @@
+@use 'mixins';
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    
+    a {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    @include mixins.mobile{
+        margin-bottom: 2rem;
+    }
+
+    img {
+        height: auto;
+        width: 45rem;
+        max-width: 90%;
+    }
+}

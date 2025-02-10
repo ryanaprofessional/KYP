@@ -8,10 +8,11 @@ import { ButtonComponent } from '../common/button/button.component';
 import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ASSETS_URL } from '../../data/assets';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'kyp-about',
-  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent, ButtonComponent, PageWrapperComponent, FooterComponent],
+  imports: [PageHeaderComponent, ExecutiveCommitteeComponent, SubHeadingComponent, VisionCommitteeComponent, DividerComponent, ButtonComponent, PageWrapperComponent, FooterComponent, LogoComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
