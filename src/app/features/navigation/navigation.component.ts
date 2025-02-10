@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { GO_FUND_ME_URL } from '../../data/gofundme';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class NavigationComponent {
     { label: 'About', link: '/about' },
     { label: 'Contact', link: '/contact' },
     { label: 'Events', link: '/events' },
-    { label: 'Donate', link: '/donate' },
+    { label: 'Donate', link: GO_FUND_ME_URL, external: true,  },
   ];
 
 

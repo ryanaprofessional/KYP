@@ -8,7 +8,8 @@
 
   <ul class="menu" [class.menu-open]="isMenuOpen">
     <li *ngFor="let item of menuItems" class="menu-item">
-      <a [routerLink]="item.link" class="menu-link" (click)="isMenuOpen = false">{{ item.label }}</a>
+      <a *ngIf="!item.external" [routerLink]="item.link" class="menu-link" (click)="isMenuOpen = false">{{ item.label }}</a>
+      <a *ngIf="item.external" [href]="item.link" target="_blank" class="menu-link">{{ item.label }}</a>
     </li>
   </ul>
 </nav>

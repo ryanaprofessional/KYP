@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { ComingSoonComponent } from '../common/coming-soon/coming-soon.component';
 
 @Component({
@@ -7,6 +7,6 @@ import { ComingSoonComponent } from '../common/coming-soon/coming-soon.component
   templateUrl: './donate.component.html',
   styleUrl: './donate.component.scss'
 })
-export class DonateComponent {
+export class DonateComponent  {
 
 }
