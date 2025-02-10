@@ -1,6 +1,7 @@
 <kyp-page-header [pageName]="'Contact KYP'"></kyp-page-header>
 
 <kyp-page-wrapper>
+    <kyp-logo />
     <h1>Contact Information</h1>
     <ul>
         <li *ngFor="let item of items"><strong>{{ item.contactType}}: </strong> {{item.contactDetails}}</li>

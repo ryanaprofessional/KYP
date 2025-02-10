@@ -9,6 +9,7 @@ import {MatInputModule} from '@angular/material/input';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 import { CollapsibleComponent, CollapsibleItems } from '../common/collapsible/collapsible.component';
 import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
+import { LogoComponent } from '../common/logo/logo.component';
 
 
 @Component({
@@ -20,7 +21,7 @@ import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.compon
     MatInputModule,
     MatDatepickerModule,
   CommonModule, PageHeaderComponent,
-  CollapsibleComponent, PageWrapperComponent],
+  CollapsibleComponent, PageWrapperComponent, LogoComponent],
   templateUrl: './events.component.html',
   styleUrl: './events.component.scss'
 })

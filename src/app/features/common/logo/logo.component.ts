@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ASSETS_URL } from '../../data/assets';
-import { GO_FUND_ME_URL } from '../../data/gofundme';
+import { ASSETS_URL } from '../../../data/assets';
+import { GO_FUND_ME_URL } from '../../../data/gofundme';
 
 @Component({
   selector: 'kyp-logo',

@@ -8,7 +8,7 @@ import { ButtonComponent } from '../common/button/button.component';
 import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ASSETS_URL } from '../../data/assets';
-import { LogoComponent } from '../logo/logo.component';
+import { LogoComponent } from '../common/logo/logo.component';
 
 @Component({
   selector: 'kyp-about',
