@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ComingSoonComponent } from '../common/coming-soon/coming-soon.component';
 import { PageHeaderComponent } from '../common/page-header/page-header.component';
 import { PageWrapperComponent } from '../common/page-wrapper/page-wrapper.component';
 import { LogoComponent } from '../common/logo/logo.component';
@@ -8,7 +7,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'kyp-resources',
-  imports: [ComingSoonComponent, PageHeaderComponent, PageWrapperComponent, LogoComponent, CommonModule],
+  imports: [PageHeaderComponent, PageWrapperComponent, LogoComponent, CommonModule],
   templateUrl: './resources.component.html',
   styleUrl: './resources.component.scss'
 })
