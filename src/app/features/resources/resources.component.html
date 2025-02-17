@@ -1,1 +1,13 @@
-<kyp-coming-soon [pageName]="'Resources Page'"></kyp-coming-soon>
+<kyp-page-header [pageName]="'Resources'"></kyp-page-header>
+
+<kyp-page-wrapper>
+    <kyp-logo />
+    <h1>EC Meeting Minutes</h1>
+    <ul>
+        <li *ngFor="let item of items">
+            <a [href]="item.url" target="_blank">
+                {{item.text}}
+            </a>
+        </li>
+    </ul>
+</kyp-page-wrapper>

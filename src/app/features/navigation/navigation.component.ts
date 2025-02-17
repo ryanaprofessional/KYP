@@ -22,6 +22,7 @@ export class NavigationComponent {
     { label: 'About', link: '/about' },
     { label: 'Contact', link: '/contact' },
     { label: 'Events', link: '/events' },
+    { label: 'Resources', link: '/resources' },
     { label: 'Donate', link: GO_FUND_ME_URL, external: true,  },
   ];
 
