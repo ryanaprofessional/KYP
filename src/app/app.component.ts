@@ -11,14 +11,30 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   title = 'kyp';
-  showModal = true;
-
+  showModal = false;
   ngOnInit(): void {
-    document.body.classList.add('modal-open');
+    const lastClosed = localStorage.getItem('modalClosedAt');
+  
+    if (lastClosed) {
+      const closedDate = new Date(lastClosed);
+      const now = new Date();
+      const daysSinceClosed = (now.getTime() - closedDate.getTime()) / (1000 * 60 * 60 * 24);
+  
+      this.showModal = daysSinceClosed >= 3;
+      if(this.showModal) {
+        document.body.classList.add('modal-open');
+      }
+    } else {
+      this.showModal = true;
+      document.body.classList.add('modal-open');
+    }
   }
 
   onCloseModal() {
     this.showModal = false;
     document.body.classList.remove('modal-open');
+    const now = new Date();
+    localStorage.setItem('modalClosedAt', now.toISOString());
+    this.showModal = false;
   }
 }
