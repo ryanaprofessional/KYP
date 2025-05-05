@@ -1,2 +1,9 @@
 <kyp-navigation/>
 <router-outlet />
+<div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-content">
+      <button class="modal-close" (click)="onCloseModal()">×</button>
+      <img class="desktop-image" src="https://prod-assets.thekentuckyparty.com/conventionModal.png" />
+      <img class="mobile-image" src="https://prod-assets.thekentuckyparty.com/conventionModalMobile.png" />
+    </div>
+  </div>
