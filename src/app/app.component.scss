@@ -1,3 +1,5 @@
+@use 'mixins';
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -27,6 +29,24 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+@include mixins.mobile {
+  .desktop-image {
+    display: none !important;
+  }
+  .mobile-image {
+    display: block;
+  }
+}
+
+@include mixins.tabletUp {
+  .desktop-image {
+    display: block;
+  }
+  .mobile-image {
+    display: none !important;
+  }
 }
 
 .modal-close {
