@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 
 export class ResourcesComponent {
   items = [
+    {text: '2025/04', url: `${ASSETS_URL}Minutes/2025_4.pdf`},
     {text: '2025/03', url: `${ASSETS_URL}Minutes/2025_3.pdf`},
     {text: '2025/02', url: `${ASSETS_URL}Minutes/2025_2.pdf`},
     {text: '2025/01', url: `${ASSETS_URL}Minutes/2025_1.pdf`}]

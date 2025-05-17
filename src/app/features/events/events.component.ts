@@ -29,8 +29,9 @@ export class EventsComponent {
   readonly panelOpenState = signal(false);
 
   items: CollapsibleItems[] = [
-    { label: 'Common Work Items Meetings', subLabel: 'Recurring - Sundays at 430PM - Lexington KY or Winchester KY', text: 'The Common Work Item Meetup is a dynamic, collaborative space for us to work together on key initiatives and projects. These sessions are designed to foster creativity and allow participants to contribute their insights toward advancing our shared goals.  We will brainstorm, develop our platform in real time, and work on initiatives together. This is a chance to engage directly in meaningful, hands-on work for the party. Join us to contribute your expertise and help drive forward the impactful work that defines the Kentucky Party!'},
+    { label: 'NATO Protest', subLabel: 'May 24th - Dayton', text: 'Mike Harbaugh is organizing a protest in Dayton against the NATO meeting there (!) to celebrate the thirtieth anniversary of bombing Yugoslavia (!!).   We are going to car pool up there and bring as many people as we can, as well as signs and hopefully puppets and other such accoutrements.' },
     { label: 'Annual Convention', subLabel: 'May 31st - First Christian Church - Berea', text: 'The Kentucky Party Annual Convention is where members come together to shape the direction of the organization for the upcoming year. Open to all members (and registered guests), the convention serves for discussing and voting on key issues, including amendments to the bylaws and updates to the party’s platform.  Members will collaborate on strategies and advance public participation across the Commonwealth. The convention will also feature the election of the Executive Committee, providing an opportunity for members to choose leadership that reflects the goals of the KYP.  Virtual attendance options will be available to ensure accessibility for all members' },
+    { label: 'Center for Political Innovation Convention', subLabel: 'July 12th-17th - Chicago', text: 'CPI national convention, anti-imperialist rally in Chicago' }, 
   ];
 
   onContactButtonClick() {
