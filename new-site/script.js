@@ -11,7 +11,7 @@ function toggleMenu() {
 
 // Open Bylaws PDF
 function openBylawsPdf() {
-    window.open('Bylaws of the Kentucky Party.pdf', '_blank');
+    window.open('files/Bylaws of the Kentucky Party.pdf', '_blank');
 }
 
 // Open Platform PDF (placeholder - update with actual PDF path when available)
