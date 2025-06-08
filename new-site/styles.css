@@ -1,0 +1,381 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navigation styles */
+.navigation {
+    background-color: #000066;
+    padding: 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+    border-radius: 0px 0px 25px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: rgb(221, 217, 217);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.brand:hover {
+    opacity: 0.8;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    padding: 0;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Menu styles */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    font-weight: bold;
+    padding: 0.5rem;
+    display: block;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+}
+
+/* Page wrapper */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Logo styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Content sections */
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.sub-heading {
+    font-size: 1.8rem;
+    color: #000066;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #000066;
+    padding-bottom: 0.5rem;
+}
+
+/* Button styles */
+.btn {
+    background-color: #000066;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000044;
+}
+
+/* Divider */
+.divider {
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 2rem 0;
+    border-radius: 1px;
+}
+
+/* Committee info */
+.committee-info {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #000066;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        background-color: #000066;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+    .menu.menu-open {
+        display: flex;
+    }
+
+    .page-wrapper {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Hamburger animation */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Contact form styles */
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.contact-info h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000066;
+}
+
+/* Events page styles */
+.events-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #000066;
+}
+
+.event-card h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.event-date,
+.event-time,
+.event-location {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.event-signup {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.event-signup h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+/* Resources page styles */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.resource-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-top: 4px solid #000066;
+}
+
+.resource-card h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin: 0.75rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.resource-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #000066;
+    font-weight: bold;
+}
+
+.resource-list a {
+    color: #000066;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+.additional-info {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.additional-info h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.additional-info a {
+    color: #000066;
+    font-weight: bold;
+}
+
+/* Responsive updates */
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    .event-signup {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kentucky Party - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="menu-header">
+            <a href="index.html" class="brand">The Kentucky Party</a>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <ul class="menu" id="menu">
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a href="events.html" class="menu-link">Events</a>
+            </li>
+            <li class="menu-item">
+                <a href="resources.html" class="menu-link">Resources</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank">
+                <img src="https://prod-assets.thekentuckyparty.com/logo.png" alt="Kentucky Party Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Bylaws Section -->
+        <section class="content-section">
+            <h2 class="sub-heading">Bylaws</h2>
+            <button class="btn" onclick="openBylawsPdf()">View Bylaws</button>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Platform Section -->
+        <section class="content-section">
+            <h2 class="sub-heading">Platform</h2>
+            <button class="btn" onclick="openPlatformPdf()">View Platform</button>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Executive Committee Section -->
+        <section class="content-section">
+            <h2 class="sub-heading">Executive Committee</h2>
+            <div class="committee-info">
+                <p>Information about the Executive Committee will be displayed here.</p>
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Vision Committee Section -->
+        <section class="content-section">
+            <h2 class="sub-heading">Vision Committee</h2>
+            <div class="committee-info">
+                <p>Information about the Vision Committee will be displayed here.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 The Kentucky Party. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
