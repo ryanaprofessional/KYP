@@ -1,0 +1,145 @@
+/* Events page styles */
+.events-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #000066;
+}
+
+.event-card h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.event-date,
+.event-time,
+.event-location {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.event-signup {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.event-signup h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.event-signup p {
+    margin-bottom: 1.5rem;
+}
+
+/* Resources page styles */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.resource-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-top: 4px solid #000066;
+}
+
+.resource-card h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin: 0.75rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.resource-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #000066;
+    font-weight: bold;
+}
+
+.resource-list a {
+    color: #000066;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+.additional-info {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.additional-info h3 {
+    color: #000066;
+    margin-bottom: 1rem;
+}
+
+.additional-info a {
+    color: #000066;
+    font-weight: bold;
+}
+
+/* Meeting minutes page styles */
+.minutes-container {
+    margin: 2rem 0;
+}
+
+.minutes-container h3 {
+    color: #000066;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.minutes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.minute-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    border-left: 4px solid #000066;
+    text-align: center;
+}
+
+.minute-card h4 {
+    color: #000066;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.minute-card .btn {
+    margin-top: 0;
+}

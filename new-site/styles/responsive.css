@@ -1,0 +1,106 @@
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Navigation responsive */
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        background-color: #000066;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+    .menu.menu-open {
+        display: flex;
+    }
+
+    /* Layout responsive */
+    .page-wrapper {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+
+    /* Components responsive */
+    .contact-form {
+        max-width: 100%;
+    }
+
+    /* Pages responsive */
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-signup {
+        padding: 1rem;
+    }
+    
+    .minutes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Store responsive */
+    .store-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .store-image-container {
+        height: 150px;
+    }
+
+    /* Modal responsive */
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .modal-image {
+        max-height: 60vh;
+    }
+    
+    .close {
+        font-size: 28px;
+        right: 15px;
+        top: 5px;
+    }
+    
+    .modal-caption h3 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-purchase-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Committee cards responsive */
+    .committee-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .member-card {
+        padding: 1rem;
+    }
+    
+    .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .member-role {
+        font-size: 0.9rem;
+    }
+}
