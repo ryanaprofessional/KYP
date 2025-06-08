@@ -438,9 +438,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .store-card:hover {
@@ -690,6 +692,10 @@ body {
 .store-card-content {
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 .purchase-btn {
@@ -702,8 +708,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
     width: 100%;
+    margin-top: auto;
 }
 
 .purchase-btn:hover {
