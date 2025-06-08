@@ -1,0 +1,248 @@
+MANAGING COMMITTEES - UPDATING EXECUTIVE AND VISION COMMITTEE MEMBERS
+========================================================================
+
+OVERVIEW
+--------
+The home page (index.html) displays two committees:
+- Executive Committee (7 members)
+- Vision Committee (2 members)
+
+Each member is shown as a card with their name and role. This guide shows you how to add, remove, or update committee members.
+
+WHERE TO FIND COMMITTEE INFORMATION
+----------------------------------
+Committee members are displayed on the home page (index.html) in two sections:
+1. Executive Committee section
+2. Vision Committee section
+
+STEP-BY-STEP INSTRUCTIONS
+-------------------------
+
+STEP 1: OPEN THE HOME PAGE FILE
+1. Open "index.html" in a text editor (like Notepad)
+2. Look for these sections:
+   - <!-- Executive Committee Section -->
+   - <!-- Vision Committee Section -->
+
+STEP 2: FIND THE COMMITTEE SECTIONS
+Look for this code structure:
+
+EXECUTIVE COMMITTEE SECTION:
+<section class="content-section">
+    <h2 class="sub-heading">Executive Committee</h2>
+    <div class="committee-grid">
+        <!-- Member cards go here -->
+    </div>
+    <div class="divider"></div>
+</section>
+
+VISION COMMITTEE SECTION:
+<section class="content-section">
+    <h2 class="sub-heading">Vision Committee</h2>
+    <div class="committee-grid">
+        <!-- Member cards go here -->
+    </div>
+</section>
+
+STEP 3: UNDERSTAND MEMBER CARD STRUCTURE
+Each committee member is represented by this code:
+
+<div class="member-card">
+    <div class="member-info">
+        <h3 class="member-name">Geoff Sebesta</h3>
+        <p class="member-role">Chair</p>
+    </div>
+</div>
+
+WHAT EACH PART DOES:
+- <div class="member-card"> = Container for one member
+- <h3 class="member-name"> = Person's name
+- <p class="member-role"> = Their role/position
+
+ADDING A NEW COMMITTEE MEMBER
+-----------------------------
+
+STEP 1: DECIDE WHICH COMMITTEE
+- Executive Committee: Add to the first committee-grid section
+- Vision Committee: Add to the second committee-grid section
+
+STEP 2: COPY AN EXISTING MEMBER CARD
+1. Find an existing member card in the same committee
+2. Copy the entire block from <div class="member-card"> to </div>
+3. Paste it after the last member in that committee
+
+STEP 3: UPDATE THE INFORMATION
+Change these parts:
+- Replace the name between <h3 class="member-name"> and </h3>
+- Replace the role between <p class="member-role"> and </p>
+
+EXAMPLE - ADDING A NEW EXECUTIVE COMMITTEE MEMBER:
+<div class="member-card">
+    <div class="member-info">
+        <h3 class="member-name">Jane Smith</h3>
+        <p class="member-role">Committee Member</p>
+    </div>
+</div>
+
+REMOVING A COMMITTEE MEMBER
+---------------------------
+
+STEP 1: FIND THE MEMBER TO REMOVE
+1. Look through the committee sections
+2. Find the member card with the person's name
+
+STEP 2: DELETE THE ENTIRE MEMBER CARD
+1. Select everything from <div class="member-card"> to the matching </div>
+2. Delete the entire block
+3. Make sure you don't accidentally delete parts of other member cards
+
+UPDATING MEMBER INFORMATION
+--------------------------
+
+TO CHANGE A NAME:
+1. Find the member's card
+2. Change the text between <h3 class="member-name"> and </h3>
+
+TO CHANGE A ROLE:
+1. Find the member's card  
+2. Change the text between <p class="member-role"> and </p>
+
+COMMON ROLES USED
+----------------
+
+EXECUTIVE COMMITTEE ROLES:
+- Chair
+- Vice Chair
+- Treasurer
+- Secretary
+- Committee Member
+
+VISION COMMITTEE ROLES:
+- Chair
+- Vice Chair
+- Committee Member
+
+CURRENT COMMITTEE MEMBERS (FOR REFERENCE)
+----------------------------------------
+
+EXECUTIVE COMMITTEE:
+1. Geoff Sebesta - Chair
+2. Evy Tomboly - Vice Chair
+3. Geoff Young - Treasurer
+4. Ryan Anderson - Secretary
+5. Shauna Rudd - Committee Member
+6. Mikael Malone - Committee Member
+7. Riley Kelly - Committee Member
+
+VISION COMMITTEE:
+1. Chris Campbell - Chair
+2. Alexin Hunter - Vice Chair
+
+COMPLETE EXAMPLE - EXECUTIVE COMMITTEE SECTION
+---------------------------------------------
+
+<section class="content-section">
+    <h2 class="sub-heading">Executive Committee</h2>
+    <div class="committee-grid">
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Geoff Sebesta</h3>
+                <p class="member-role">Chair</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Evy Tomboly</h3>
+                <p class="member-role">Vice Chair</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Geoff Young</h3>
+                <p class="member-role">Treasurer</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Ryan Anderson</h3>
+                <p class="member-role">Secretary</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Shauna Rudd</h3>
+                <p class="member-role">Committee Member</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Mikael Malone</h3>
+                <p class="member-role">Committee Member</p>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="member-info">
+                <h3 class="member-name">Riley Kelly</h3>
+                <p class="member-role">Committee Member</p>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+</section>
+
+TROUBLESHOOTING
+--------------
+
+PROBLEM: Member cards look broken or misaligned
+SOLUTION: 
+- Check that each member card has matching opening and closing tags
+- Make sure you didn't accidentally delete part of the HTML structure
+- Verify that each <div> has a matching </div>
+
+PROBLEM: Names or roles don't display correctly
+SOLUTION:
+- Check that text is between the correct tags
+- Make sure you didn't accidentally delete the <h3> or <p> tags
+- Verify there are no extra characters or symbols
+
+PROBLEM: New member doesn't appear
+SOLUTION:
+- Make sure you added the member card inside the correct committee-grid section
+- Check that the HTML structure is complete
+- Verify you saved the file after making changes
+
+PROBLEM: Page layout is broken
+SOLUTION:
+- Check that you didn't accidentally modify the committee-grid or content-section tags
+- Make sure all HTML tags are properly closed
+- Try undoing your changes and starting over more carefully
+
+STYLING NOTES
+------------
+The appearance of committee member cards is controlled by CSS files:
+- styles/committees.css - Main styling for member cards
+- styles/responsive.css - Mobile/tablet adjustments
+
+You don't need to modify these files unless you want to change colors, fonts, or layout.
+
+TESTING CHECKLIST
+-----------------
+After making committee changes, test:
+
+□ All member names display correctly
+□ All member roles display correctly  
+□ Cards are properly aligned
+□ Layout looks good on desktop
+□ Layout looks good on mobile (narrow browser window)
+□ No HTML errors or broken formatting
+□ Both Executive and Vision Committee sections work properly
+
+TIPS FOR SUCCESS
+---------------
+- Always make a backup copy of index.html before editing
+- Make one change at a time and test it
+- Be very careful with HTML tags - they must match exactly
+- When copying member cards, copy the entire block including all tags
+- Test your changes in a web browser after saving
+
+Remember: Committee member information only appears on the home page (index.html). Changes here don't affect other pages.

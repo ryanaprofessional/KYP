@@ -1,0 +1,276 @@
+UPDATING DOCUMENTS - BYLAWS AND PLATFORM LINKS
+=================================================
+
+OVERVIEW
+--------
+The home page (index.html) has two important document sections:
+1. Bylaws section - with a button to view the bylaws PDF
+2. Platform section - with a button to view the platform (currently shows a placeholder message)
+
+This guide shows you how to update these document links when new versions are available.
+
+CURRENT DOCUMENT STATUS
+-----------------------
+
+BYLAWS:
+- Status: Active and working
+- File location: new-site/files/Bylaws of the Kentucky Party.pdf
+- Button text: "View Bylaws"
+- Function: Opens PDF in new tab
+
+PLATFORM:
+- Status: Placeholder message (no PDF yet)
+- Button text: "View Platform"  
+- Function: Shows alert message saying "Platform PDF will be available soon"
+
+UPDATING THE BYLAWS DOCUMENT
+----------------------------
+
+STEP 1: PREPARE THE NEW BYLAWS PDF
+1. Get the updated bylaws document in PDF format
+2. Name it exactly: "Bylaws of the Kentucky Party.pdf"
+3. Replace the existing file in: new-site/files/
+
+STEP 2: TEST THE BYLAWS LINK
+1. Open index.html in your web browser
+2. Click the "View Bylaws" button
+3. Verify that the new PDF opens correctly
+
+NO CODE CHANGES NEEDED:
+If you keep the same filename, the website will automatically use the new PDF without any code changes.
+
+ALTERNATIVE - CHANGING THE BYLAWS FILENAME:
+If you want to use a different filename:
+
+STEP 1: PLACE THE NEW PDF
+Put your new PDF file in new-site/files/ with whatever name you prefer
+
+STEP 2: UPDATE THE CODE
+1. Open "index.html" in a text editor
+2. Find this line:
+   function openBylawsPdf() {
+       window.open('files/Bylaws of the Kentucky Party.pdf', '_blank');
+   }
+3. Change the filename to match your new file:
+   function openBylawsPdf() {
+       window.open('files/Your-New-Filename.pdf', '_blank');
+   }
+
+STEP 3: UPDATE SCRIPT.JS
+1. Open "script.js" in a text editor
+2. Find this function:
+   function openBylawsPdf() {
+       window.open('files/Bylaws of the Kentucky Party.pdf', '_blank');
+   }
+3. Change the filename to match your new file:
+   function openBylawsPdf() {
+       window.open('files/Your-New-Filename.pdf', '_blank');
+   }
+
+ADDING THE PLATFORM DOCUMENT
+----------------------------
+
+STEP 1: PREPARE THE PLATFORM PDF
+1. Get the platform document in PDF format
+2. Name it something clear like: "Kentucky Party Platform.pdf"
+3. Place it in: new-site/files/
+
+STEP 2: UPDATE THE PLATFORM FUNCTION
+1. Open "script.js" in a text editor
+2. Find this function:
+   function openPlatformPdf() {
+       alert('Platform PDF will be available soon. Please check back later.');
+   }
+3. Replace it with:
+   function openPlatformPdf() {
+       window.open('files/Kentucky Party Platform.pdf', '_blank');
+   }
+
+STEP 3: TEST THE PLATFORM LINK
+1. Open index.html in your web browser
+2. Click the "View Platform" button
+3. Verify that the PDF opens correctly
+
+UNDERSTANDING THE CODE
+----------------------
+
+WHERE DOCUMENT FUNCTIONS ARE DEFINED:
+The functions that open PDFs are defined in two places:
+1. script.js - Main function definitions
+2. index.html - Inline function definitions (these override script.js)
+
+CURRENT BYLAWS FUNCTION (in script.js):
+function openBylawsPdf() {
+    window.open('files/Bylaws of the Kentucky Party.pdf', '_blank');
+}
+
+CURRENT PLATFORM FUNCTION (in script.js):
+function openPlatformPdf() {
+    alert('Platform PDF will be available soon. Please check back later.');
+}
+
+HOW THE BUTTONS WORK:
+In index.html, the buttons use onclick to call these functions:
+<button class="btn" onclick="openBylawsPdf()">View Bylaws</button>
+<button class="btn" onclick="openPlatformPdf()">View Platform</button>
+
+WHAT THIS MEANS:
+- onclick="openBylawsPdf()" calls the openBylawsPdf function
+- window.open('filename', '_blank') opens the file in a new tab
+- alert('message') shows a popup message
+
+COMPLETE EXAMPLE - BOTH DOCUMENTS WORKING
+----------------------------------------
+
+UPDATED SCRIPT.JS FUNCTIONS:
+// Open Bylaws PDF
+function openBylawsPdf() {
+    window.open('files/Bylaws of the Kentucky Party.pdf', '_blank');
+}
+
+// Open Platform PDF
+function openPlatformPdf() {
+    window.open('files/Kentucky Party Platform.pdf', '_blank');
+}
+
+FILE STRUCTURE AFTER ADDING PLATFORM:
+new-site/files/
+├── Bylaws of the Kentucky Party.pdf
+├── Kentucky Party Platform.pdf
+└── minutes/
+    ├── 2024_12.pdf
+    ├── 2025_1.pdf
+    ├── 2025_2.pdf
+    ├── 2025_3.pdf
+    └── 2025_4.pdf
+
+CHANGING BUTTON TEXT
+-------------------
+
+TO CHANGE BYLAWS BUTTON TEXT:
+1. Open index.html
+2. Find: <button class="btn" onclick="openBylawsPdf()">View Bylaws</button>
+3. Change "View Bylaws" to your preferred text
+4. Example: <button class="btn" onclick="openBylawsPdf()">Download Bylaws</button>
+
+TO CHANGE PLATFORM BUTTON TEXT:
+1. Open index.html
+2. Find: <button class="btn" onclick="openPlatformPdf()">View Platform</button>
+3. Change "View Platform" to your preferred text
+4. Example: <button class="btn" onclick="openPlatformPdf()">Read Our Platform</button>
+
+ADDING MORE DOCUMENT SECTIONS
+-----------------------------
+
+If you want to add additional documents (like a constitution, handbook, etc.):
+
+STEP 1: ADD THE SECTION TO INDEX.HTML
+Add this after the Platform section:
+
+<section class="content-section">
+    <h2 class="sub-heading">Constitution</h2>
+    <button class="btn" onclick="openConstitutionPdf()">View Constitution</button>
+    <div class="divider"></div>
+</section>
+
+STEP 2: ADD THE FUNCTION TO SCRIPT.JS
+Add this function:
+
+function openConstitutionPdf() {
+    window.open('files/Kentucky Party Constitution.pdf', '_blank');
+}
+
+STEP 3: ADD THE PDF FILE
+Place your PDF in: new-site/files/Kentucky Party Constitution.pdf
+
+TROUBLESHOOTING
+--------------
+
+PROBLEM: Button doesn't work (nothing happens when clicked)
+SOLUTION:
+- Check that the function name in onclick matches the function in script.js
+- Verify that script.js is properly linked in the HTML
+- Make sure there are no typos in the function name
+
+PROBLEM: Button shows error or "file not found"
+SOLUTION:
+- Check that the PDF file exists in the new-site/files/ folder
+- Verify the filename in the code exactly matches the actual file
+- Make sure the file path starts with "files/"
+
+PROBLEM: PDF opens but shows error or blank page
+SOLUTION:
+- Check that the PDF file isn't corrupted
+- Try opening the PDF file directly to test it
+- Make sure the PDF is a valid, readable document
+
+PROBLEM: Changes don't take effect
+SOLUTION:
+- Make sure you saved both script.js and index.html files
+- Clear your browser cache and refresh the page
+- Check that you updated the function in the correct file
+
+COMMON MISTAKES TO AVOID
+-----------------------
+
+WRONG FILE PATH:
+❌ window.open('Bylaws.pdf', '_blank') (missing folder)
+✅ window.open('files/Bylaws.pdf', '_blank') (correct path)
+
+MISMATCHED FUNCTION NAMES:
+❌ Button: onclick="openBylaws()" but function: openBylawsPdf()
+✅ Make sure the onclick name exactly matches the function name
+
+MISSING QUOTES:
+❌ window.open(files/Bylaws.pdf, _blank)
+✅ window.open('files/Bylaws.pdf', '_blank')
+
+FORGETTING TO UPDATE BOTH FILES:
+❌ Updating only script.js or only index.html
+✅ Update the function in script.js (and remove any inline versions in index.html)
+
+BEST PRACTICES
+--------------
+
+FILE NAMING:
+- Use descriptive, clear filenames
+- Avoid spaces if possible (use hyphens or underscores)
+- Keep filenames consistent and professional
+
+VERSION CONTROL:
+- Keep backup copies of old documents
+- Consider adding version numbers or dates to filenames
+- Example: "Bylaws-2025-v2.pdf"
+
+TESTING:
+- Always test document links after making changes
+- Test on both desktop and mobile devices
+- Verify PDFs are readable and properly formatted
+
+ORGANIZATION:
+- Keep all party documents in the new-site/files/ folder
+- Use subfolders if you have many documents
+- Maintain a list of current documents and their purposes
+
+TESTING CHECKLIST
+-----------------
+After updating documents, test:
+
+□ PDF file is in the correct location (new-site/files/)
+□ Filename in code matches actual filename exactly
+□ Button clicks work and open the correct document
+□ PDF opens in a new tab (doesn't replace the website)
+□ PDF displays correctly and is readable
+□ Document content is current and accurate
+□ Both desktop and mobile users can access documents
+□ No JavaScript errors in browser console
+
+TIPS FOR SUCCESS
+---------------
+- Keep document filenames simple and consistent
+- Always test links after making changes
+- Maintain backup copies of important documents
+- Update documents promptly when new versions are available
+- Consider file sizes - large PDFs may load slowly on mobile
+
+Remember: These documents represent official Kentucky Party positions and procedures. Keep them current, accessible, and professionally presented!

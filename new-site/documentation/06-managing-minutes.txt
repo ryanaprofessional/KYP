@@ -1,0 +1,270 @@
+MANAGING MEETING MINUTES - ADDING MEETING MINUTES
+===================================================
+
+OVERVIEW
+--------
+The minutes page (minutes.html) displays meeting minutes organized by date. Each minute entry shows as a card with the meeting date and a button to open the PDF document.
+
+WHERE MINUTES ARE STORED
+------------------------
+- PDF files: stored in new-site/files/minutes/
+- Display information: coded in minutes.html
+
+CURRENT MINUTES AVAILABLE
+-------------------------
+The website currently has these meeting minutes:
+- December 2024 (2024_12.pdf)
+- January 2025 (2025_1.pdf)
+- February 2025 (2025_2.pdf)
+- March 2025 (2025_3.pdf)
+- April 2025 (2025_4.pdf)
+
+STEP-BY-STEP INSTRUCTIONS
+-------------------------
+
+STEP 1: PREPARE THE MINUTES PDF
+1. Get the meeting minutes in PDF format
+2. Name the file using this format: YYYY_M.pdf
+   - YYYY = 4-digit year
+   - M = month number (1-12, no leading zero)
+   - Examples: 2025_5.pdf, 2025_12.pdf
+3. Copy the PDF file to: new-site/files/minutes/
+
+STEP 2: OPEN THE MINUTES PAGE
+1. Open "minutes.html" in a text editor (like Notepad)
+2. Look for the section with <div class="minutes-grid">
+
+STEP 3: UNDERSTAND MINUTE CARD STRUCTURE
+Each minute entry uses this code:
+
+<div class="minute-card">
+    <h4>April 2025</h4>
+    <button class="btn" onclick="openMinutePdf('files/minutes/2025_4.pdf')">View Minutes</button>
+</div>
+
+WHAT EACH PART DOES:
+- <div class="minute-card"> = Container for one minute entry
+- <h4> = Display name (Month Year)
+- <button> = Button to open the PDF
+- onclick="openMinutePdf('...')" = Function that opens the PDF file
+
+STEP 4: ADD A NEW MINUTE ENTRY
+
+FIND THE MINUTES GRID:
+Look for this section in minutes.html:
+<div class="minutes-grid">
+    <!-- Existing minute cards are here -->
+</div>
+
+COPY AN EXISTING MINUTE CARD:
+1. Find an existing minute card
+2. Copy everything from <div class="minute-card"> to </div>
+3. Paste it at the TOP of the minutes-grid (for newest first order)
+
+UPDATE THE INFORMATION:
+Change these parts:
+- Display name: Change "April 2025" to your new month/year
+- File path: Change "files/minutes/2025_4.pdf" to your new file path
+
+EXAMPLE - ADDING MAY 2025 MINUTES:
+<div class="minute-card">
+    <h4>May 2025</h4>
+    <button class="btn" onclick="openMinutePdf('files/minutes/2025_5.pdf')">View Minutes</button>
+</div>
+
+COMPLETE EXAMPLE - ADDING NEW MINUTES
+------------------------------------
+
+BEFORE (existing minutes):
+<div class="minutes-grid">
+    <div class="minute-card">
+        <h4>April 2025</h4>
+        <button class="btn" onclick="openMinutePdf('files/minutes/2025_4.pdf')">View Minutes</button>
+    </div>
+    <div class="minute-card">
+        <h4>March 2025</h4>
+        <button class="btn" onclick="openMinutePdf('files/minutes/2025_3.pdf')">View Minutes</button>
+    </div>
+    <!-- More existing minutes... -->
+</div>
+
+AFTER (with May 2025 added):
+<div class="minutes-grid">
+    <div class="minute-card">
+        <h4>May 2025</h4>
+        <button class="btn" onclick="openMinutePdf('files/minutes/2025_5.pdf')">View Minutes</button>
+    </div>
+    <div class="minute-card">
+        <h4>April 2025</h4>
+        <button class="btn" onclick="openMinutePdf('files/minutes/2025_4.pdf')">View Minutes</button>
+    </div>
+    <div class="minute-card">
+        <h4>March 2025</h4>
+        <button class="btn" onclick="openMinutePdf('files/minutes/2025_3.pdf')">View Minutes</button>
+    </div>
+    <!-- More existing minutes... -->
+</div>
+
+FILE NAMING CONVENTIONS
+-----------------------
+
+PDF FILE NAMES:
+- Format: YYYY_M.pdf
+- Year: 4 digits (2025, 2026, etc.)
+- Month: 1 or 2 digits (1, 2, 3... 10, 11, 12)
+- Examples:
+  - January 2025: 2025_1.pdf
+  - October 2025: 2025_10.pdf
+  - December 2025: 2025_12.pdf
+
+DISPLAY NAMES:
+- Format: "Month YYYY"
+- Use full month names
+- Examples:
+  - "January 2025"
+  - "October 2025"
+  - "December 2025"
+
+ORGANIZING MINUTES
+-----------------
+
+CHRONOLOGICAL ORDER:
+- Newest minutes should appear first (at the top)
+- This helps visitors find recent minutes quickly
+- When adding new minutes, put them at the beginning of the minutes-grid
+
+YEARLY ORGANIZATION:
+If you have many minutes, consider adding year headers:
+
+<div class="minutes-container">
+    <h3>2025 Meeting Minutes</h3>
+    <div class="minutes-grid">
+        <!-- 2025 minutes here -->
+    </div>
+</div>
+
+<div class="minutes-container">
+    <h3>2024 Meeting Minutes</h3>
+    <div class="minutes-grid">
+        <!-- 2024 minutes here -->
+    </div>
+</div>
+
+UPDATING EXISTING MINUTES
+-------------------------
+
+TO REPLACE A MINUTE FILE:
+1. Replace the PDF file in new-site/files/minutes/
+2. Keep the same filename
+3. No changes needed in minutes.html
+
+TO CHANGE A DISPLAY NAME:
+1. Find the minute card in minutes.html
+2. Change the text between <h4> and </h4>
+
+TO REMOVE OLD MINUTES:
+1. Delete the minute card from minutes.html
+2. Optionally delete the PDF file from new-site/files/minutes/
+
+TROUBLESHOOTING
+--------------
+
+PROBLEM: "View Minutes" button doesn't work
+SOLUTION:
+- Check that the PDF file exists in new-site/files/minutes/
+- Verify the filename in the onclick matches the actual file exactly
+- Make sure the file path starts with "files/minutes/"
+
+PROBLEM: New minute doesn't appear
+SOLUTION:
+- Make sure you added the minute card inside the minutes-grid section
+- Check that the HTML structure is complete
+- Verify you saved the file after making changes
+
+PROBLEM: PDF opens but shows error or blank page
+SOLUTION:
+- Check that the PDF file isn't corrupted
+- Try opening the PDF file directly to test it
+- Make sure the PDF is a valid, readable document
+
+PROBLEM: Minutes appear in wrong order
+SOLUTION:
+- Remember that newest minutes should be at the top
+- Move minute cards by cutting and pasting entire blocks
+- Check that you're adding new minutes at the beginning of minutes-grid
+
+COMMON MISTAKES TO AVOID
+-----------------------
+
+WRONG FILE PATH:
+❌ onclick="openMinutePdf('2025_5.pdf')" (missing folder path)
+✅ onclick="openMinutePdf('files/minutes/2025_5.pdf')" (correct path)
+
+MISMATCHED FILENAMES:
+❌ File: "may_2025.pdf" but code says "2025_5.pdf"
+✅ Make sure the filename in your code exactly matches the actual file
+
+INCONSISTENT NAMING:
+❌ Mixing formats like "2025_5.pdf" and "May-2025.pdf"
+✅ Use consistent YYYY_M.pdf format for all files
+
+MISSING QUOTES:
+❌ onclick=openMinutePdf(files/minutes/2025_5.pdf)
+✅ onclick="openMinutePdf('files/minutes/2025_5.pdf')"
+
+TECHNICAL DETAILS
+----------------
+
+HOW THE PDF OPENING WORKS:
+The openMinutePdf function is defined in script.js:
+- It takes the file path as a parameter
+- Opens the PDF in a new browser tab/window
+- This allows people to view or download the minutes
+
+THE FUNCTION LOOKS LIKE THIS:
+function openMinutePdf(pdfPath) {
+    window.open(pdfPath, '_blank');
+}
+
+You don't need to modify this function - just use it correctly in the onclick attributes.
+
+TESTING CHECKLIST
+-----------------
+After adding new meeting minutes, test:
+
+□ PDF file is in the correct folder (new-site/files/minutes/)
+□ Filename follows YYYY_M.pdf format
+□ New minute card appears on the minutes page
+□ Display name is correct (Month YYYY format)
+□ "View Minutes" button works and opens the correct PDF
+□ PDF opens in a new tab and displays correctly
+□ Minutes are in chronological order (newest first)
+□ Layout looks good on both desktop and mobile
+
+BEST PRACTICES
+--------------
+
+REGULAR UPDATES:
+- Add new minutes promptly after each meeting
+- Keep minutes organized and easy to find
+- Consider archiving very old minutes if the list gets too long
+
+FILE MANAGEMENT:
+- Keep PDF files reasonably sized (under 5MB if possible)
+- Use descriptive but consistent filenames
+- Back up PDF files in addition to the website
+
+ACCESSIBILITY:
+- Ensure PDF files are readable and well-formatted
+- Consider providing text summaries for key decisions
+- Make sure PDFs work well on mobile devices
+
+TIPS FOR SUCCESS
+---------------
+- Always test the PDF link after adding new minutes
+- Keep a backup of both the PDF file and the updated HTML
+- Use consistent naming conventions to avoid confusion
+- Add new minutes at the top of the list for easy access
+- Double-check file paths and filenames for accuracy
+
+Remember: Meeting minutes are important historical records. Keep them organized, accessible, and properly archived!

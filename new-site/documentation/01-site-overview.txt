@@ -1,0 +1,138 @@
+SITE OVERVIEW - UNDERSTANDING THE WEBSITE BASICS
+===================================================
+
+WHAT IS A WEBSITE?
+-----------------
+A website is a collection of files that work together to create what you see in your web browser. Think of it like a digital brochure or magazine that people can view on their computers and phones.
+
+THE THREE MAIN PARTS
+--------------------
+
+1. HTML FILES (.html)
+   - These contain the content and structure (text, images, links)
+   - Like the skeleton of a house - they define what goes where
+   - Examples: index.html, store.html, contact.html
+
+2. CSS FILES (.css) 
+   - These control how everything looks (colors, fonts, layout)
+   - Like the paint and decorations of a house
+   - Located in the "styles" folder
+
+3. JAVASCRIPT FILES (.js)
+   - These make things interactive (buttons, menus, pop-ups)
+   - Like the electrical system of a house
+   - Main file: script.js
+
+WEBSITE FILE STRUCTURE
+---------------------
+new-site/
+├── index.html              (Home page - About section)
+├── store.html               (Store page with merchandise)
+├── contact.html             (Contact information and form)
+├── events.html              (Events and meetings)
+├── resources.html           (Resources and links)
+├── minutes.html             (Meeting minutes)
+├── script.js                (Interactive features)
+├── styles/                  (All styling files)
+│   ├── main.css            (Main stylesheet)
+│   ├── base.css            (Basic styles)
+│   ├── navigation.css      (Menu and navigation)
+│   ├── layout.css          (Page layout)
+│   ├── components.css      (Buttons, forms)
+│   ├── pages.css           (Page-specific styles)
+│   ├── store.css           (Store page styles)
+│   ├── committees.css      (Committee member cards)
+│   └── responsive.css      (Mobile/tablet styles)
+├── images/                  (All pictures)
+│   ├── logo.png            (Kentucky Party logo)
+│   └── store/              (Store merchandise images)
+├── files/                   (Documents and PDFs)
+│   ├── Bylaws of the Kentucky Party.pdf
+│   └── minutes/            (Meeting minute PDFs)
+└── documentation/           (These help files)
+
+WHAT EACH PAGE DOES
+------------------
+
+INDEX.HTML (Home Page):
+- Shows information about the Kentucky Party
+- Displays Executive Committee members
+- Displays Vision Committee members  
+- Has buttons to view Bylaws and Platform
+
+STORE.HTML:
+- Shows merchandise (shirts) for sale
+- Each item can be clicked to view full-size image
+- Purchase buttons redirect to donation page
+
+CONTACT.HTML:
+- Shows contact information
+- Has a contact form (currently for display only)
+
+EVENTS.HTML:
+- Lists upcoming events and meetings
+- Shows event details like date, time, location
+
+RESOURCES.HTML:
+- Provides links to external resources
+- Organized into categories
+
+MINUTES.HTML:
+- Shows meeting minutes organized by date
+- Each minute has a button to open the PDF
+
+HOW PAGES CONNECT
+----------------
+All pages have the same navigation menu at the top:
+- About (goes to index.html)
+- Contact (goes to contact.html)  
+- Events (goes to events.html)
+- Resources (goes to resources.html)
+- Store (goes to store.html)
+- Donate (goes to external GoFundMe page)
+
+WHAT THIS MEANS FOR YOU
+----------------------
+- To change content, edit the .html files
+- To change colors or layout, edit the .css files
+- To change interactive features, edit script.js
+- To add images, put them in the images folder
+- To add documents, put them in the files folder
+
+BASIC WEB DEVELOPMENT CONCEPTS
+-----------------------------
+
+HTML TAGS:
+HTML uses "tags" to define content. Tags are surrounded by < and >
+Example: <h1>This is a heading</h1>
+- <h1> starts the heading
+- </h1> ends the heading
+- The text between them is what appears on the page
+
+COMMON HTML TAGS YOU'LL SEE:
+- <h1>, <h2>, <h3> = Headings (different sizes)
+- <p> = Paragraph of text
+- <a href="..."> = Links to other pages
+- <img src="..."> = Images
+- <div> = Container for grouping content
+- <button> = Clickable buttons
+
+CSS CLASSES:
+CSS uses "classes" to style elements. Classes start with a dot (.)
+Example: .store-card { background: white; }
+This makes all elements with class="store-card" have a white background
+
+JAVASCRIPT FUNCTIONS:
+JavaScript uses "functions" to make things happen
+Example: function openModal() { ... }
+This creates a function that can be called when someone clicks something
+
+TESTING YOUR CHANGES
+--------------------
+1. Make your changes in a text editor
+2. Save the file
+3. Open (or refresh) the website in your browser
+4. Check that everything looks correct
+5. Test on mobile by making your browser window very narrow
+
+Remember: Always keep backup copies of files before making changes!

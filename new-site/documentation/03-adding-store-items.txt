@@ -1,0 +1,178 @@
+ADDING STORE ITEMS - HOW TO ADD NEW MERCHANDISE
+===================================================
+
+OVERVIEW
+--------
+The store page displays merchandise (currently shirts) that people can view and purchase through the donation page. Each item shows an image, title, and purchase button.
+
+WHAT YOU'LL NEED
+---------------
+- Image file of the new merchandise (PNG or JPG format)
+- Name/title for the item
+- Basic text editing skills
+
+STEP-BY-STEP INSTRUCTIONS
+-------------------------
+
+STEP 1: PREPARE THE IMAGE
+1. Get a high-quality image of your merchandise
+2. Recommended size: 400x400 pixels or larger
+3. Save it as a PNG or JPG file
+4. Give it a descriptive name (example: "KYP_New_Design.png")
+5. Copy the image file to: new-site/images/store/
+
+STEP 2: EDIT THE STORE PAGE
+1. Open "store.html" in a text editor (like Notepad)
+2. Find the section that starts with <div class="store-grid">
+3. You'll see existing store cards that look like this:
+
+<div class="store-card">
+    <div class="store-image-container" onclick="openImageModal('images/store/kyp.png', 'KYP Shirt')">
+        <img src="images/store/kyp.png" alt="KYP Shirt" class="store-image">
+        <div class="image-overlay">
+            <span class="view-fullscreen">🔍 View Full Size</span>
+        </div>
+    </div>
+    <div class="store-card-content">
+        <h4 class="store-item-title">KYP Shirt</h4>
+        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+    </div>
+</div>
+
+STEP 3: ADD YOUR NEW ITEM
+1. Copy one of the existing store card blocks (everything from <div class="store-card"> to </div>)
+2. Paste it after the last existing store card
+3. Update the following parts:
+
+CHANGE THESE PARTS:
+- Replace 'images/store/kyp.png' with your new image path (appears twice)
+- Replace 'KYP Shirt' with your new item name (appears three times)
+
+EXAMPLE - ADDING A NEW HAT:
+<div class="store-card">
+    <div class="store-image-container" onclick="openImageModal('images/store/KYP_Hat.png', 'KYP Hat')">
+        <img src="images/store/KYP_Hat.png" alt="KYP Hat" class="store-image">
+        <div class="image-overlay">
+            <span class="view-fullscreen">🔍 View Full Size</span>
+        </div>
+    </div>
+    <div class="store-card-content">
+        <h4 class="store-item-title">KYP Hat</h4>
+        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+    </div>
+</div>
+
+STEP 4: SAVE AND TEST
+1. Save the store.html file
+2. Open store.html in your web browser
+3. Check that your new item appears
+4. Click on the image to make sure the full-size view works
+5. Click the Purchase button to make sure it goes to the donation page
+6. Test on mobile by making your browser window narrow
+
+UNDERSTANDING THE CODE
+---------------------
+
+WHAT EACH PART DOES:
+
+<div class="store-card">
+- Creates a container for one store item
+
+<div class="store-image-container" onclick="openImageModal('images/store/KYP_Hat.png', 'KYP Hat')">
+- Creates the image area
+- onclick="openImageModal(...)" makes the image clickable to show full size
+- First parameter: path to your image file
+- Second parameter: name of your item
+
+<img src="images/store/KYP_Hat.png" alt="KYP Hat" class="store-image">
+- Displays the actual image
+- src: path to your image file
+- alt: description for screen readers and if image doesn't load
+
+<div class="image-overlay">
+- Creates the "View Full Size" overlay that appears on hover (desktop only)
+
+<h4 class="store-item-title">KYP Hat</h4>
+- Displays the item name below the image
+
+<button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+- Creates the purchase button that redirects to donation page
+
+COMMON MISTAKES TO AVOID
+------------------------
+
+WRONG IMAGE PATH:
+❌ src="KYP_Hat.png" (missing folder path)
+✅ src="images/store/KYP_Hat.png" (correct path)
+
+MISMATCHED NAMES:
+❌ Image file: "hat.png" but code says "KYP_Hat.png"
+✅ Make sure the filename in your code exactly matches the actual file
+
+MISSING QUOTES:
+❌ onclick=openImageModal(images/store/hat.png, Hat)
+✅ onclick="openImageModal('images/store/hat.png', 'Hat')"
+
+FORGETTING TO UPDATE ALL INSTANCES:
+- The image path appears twice in each store card
+- The item name appears three times in each store card
+- Make sure to update ALL of them
+
+TROUBLESHOOTING
+--------------
+
+PROBLEM: Image doesn't show up
+SOLUTION: 
+- Check that the image file is in new-site/images/store/
+- Check that the filename in the code exactly matches the actual file
+- Check that the image path starts with "images/store/"
+
+PROBLEM: Clicking image doesn't open full-size view
+SOLUTION:
+- Check that both image paths in the onclick and src are correct
+- Make sure the item name in quotes matches exactly
+
+PROBLEM: Purchase button doesn't work
+SOLUTION:
+- Make sure the button code is exactly: onclick="goToDonate()"
+- Check that script.js file is present and linked in the HTML
+
+PROBLEM: New item appears in wrong place
+SOLUTION:
+- Make sure you pasted the new store card inside the <div class="store-grid"> section
+- Make sure you didn't accidentally paste it inside another store card
+
+ADVANCED TIPS
+------------
+
+ORGANIZING ITEMS:
+- Items appear in the order they're written in the HTML
+- To reorder items, cut and paste the entire store card blocks
+- Consider grouping similar items together
+
+IMAGE OPTIMIZATION:
+- Larger images take longer to load
+- Consider resizing images to 400x400 pixels for faster loading
+- Use PNG for images with text or sharp edges
+- Use JPG for photographs
+
+ADDING CATEGORIES:
+If you want to add different types of merchandise (hats, stickers, etc.):
+1. Add a new heading before the new items:
+   <h2 class="store-section-title">Hats</h2>
+2. This will create a section header like the existing "Shirts" section
+
+TESTING CHECKLIST
+-----------------
+After adding a new store item, test:
+
+□ Image displays correctly on desktop
+□ Image displays correctly on mobile
+□ Clicking image opens full-size modal
+□ Modal shows correct image and title
+□ Purchase button works in both card and modal
+□ Item title displays correctly
+□ Layout looks good with the new item added
+□ No other items were accidentally broken
+
+Remember: Always keep a backup copy of store.html before making changes!

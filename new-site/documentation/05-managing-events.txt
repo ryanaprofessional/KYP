@@ -1,0 +1,247 @@
+MANAGING EVENTS - ADDING AND UPDATING EVENTS
+===============================================
+
+OVERVIEW
+--------
+The events page (events.html) displays upcoming meetings and events for the Kentucky Party. Each event shows details like date, time, location, and description.
+
+WHERE EVENTS ARE DISPLAYED
+--------------------------
+Events appear on the events page (events.html) in individual event cards. There's also a section at the bottom for event signup information.
+
+STEP-BY-STEP INSTRUCTIONS
+-------------------------
+
+STEP 1: OPEN THE EVENTS PAGE
+1. Open "events.html" in a text editor (like Notepad)
+2. Look for the section that starts with <div class="events-container">
+
+STEP 2: UNDERSTAND EVENT STRUCTURE
+Each event is displayed using this code structure:
+
+<div class="event-card">
+    <h3>Monthly Meeting</h3>
+    <p class="event-date"><strong>Date:</strong> First Saturday of each month</p>
+    <p class="event-time"><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+    <p class="event-location"><strong>Location:</strong> Community Center, Main Street</p>
+    <p>Join us for our monthly meeting to discuss party business, upcoming events, and community initiatives. All members and interested community members are welcome.</p>
+</div>
+
+WHAT EACH PART DOES:
+- <div class="event-card"> = Container for one event
+- <h3> = Event title/name
+- <p class="event-date"> = Event date
+- <p class="event-time"> = Event time  
+- <p class="event-location"> = Event location
+- <p> (without class) = Event description
+
+ADDING A NEW EVENT
+------------------
+
+STEP 1: FIND THE EVENTS CONTAINER
+Look for this section in events.html:
+<div class="events-container">
+    <!-- Existing events are here -->
+</div>
+
+STEP 2: COPY AN EXISTING EVENT
+1. Find an existing event card
+2. Copy everything from <div class="event-card"> to </div>
+3. Paste it inside the events-container (before the closing </div>)
+
+STEP 3: UPDATE THE EVENT INFORMATION
+Change these parts to match your new event:
+- Event title (between <h3> and </h3>)
+- Date (after <strong>Date:</strong>)
+- Time (after <strong>Time:</strong>)
+- Location (after <strong>Location:</strong>)
+- Description (in the final <p> tag)
+
+EXAMPLE - ADDING A FUNDRAISING EVENT:
+<div class="event-card">
+    <h3>Annual Fundraising Dinner</h3>
+    <p class="event-date"><strong>Date:</strong> Saturday, March 15, 2025</p>
+    <p class="event-time"><strong>Time:</strong> 6:00 PM - 9:00 PM</p>
+    <p class="event-location"><strong>Location:</strong> Grand Ballroom, Downtown Hotel</p>
+    <p>Join us for an evening of great food, inspiring speakers, and community fellowship. Tickets are $50 per person and include dinner and entertainment. All proceeds support Kentucky Party initiatives.</p>
+</div>
+
+UPDATING AN EXISTING EVENT
+--------------------------
+
+STEP 1: FIND THE EVENT TO UPDATE
+1. Look through the events-container section
+2. Find the event card with the title you want to change
+
+STEP 2: MODIFY THE INFORMATION
+Update any of these parts:
+- Title: Change text between <h3> and </h3>
+- Date: Change text after <strong>Date:</strong>
+- Time: Change text after <strong>Time:</strong>
+- Location: Change text after <strong>Location:</strong>
+- Description: Change text in the final <p> tag
+
+REMOVING AN EVENT
+-----------------
+
+STEP 1: FIND THE EVENT TO REMOVE
+1. Look through the events-container section
+2. Find the event card you want to delete
+
+STEP 2: DELETE THE ENTIRE EVENT CARD
+1. Select everything from <div class="event-card"> to the matching </div>
+2. Delete the entire block
+3. Make sure you don't accidentally delete parts of other events
+
+UPDATING EVENT SIGNUP INFORMATION
+---------------------------------
+
+At the bottom of the events page, there's a signup section:
+
+<div class="event-signup">
+    <h3>Stay Updated on Events</h3>
+    <p>Want to be notified about upcoming Kentucky Party events? Contact us or follow our social media for the latest updates.</p>
+    <button class="btn" onclick="window.location.href='contact.html'">Contact Us</button>
+</div>
+
+TO UPDATE THIS SECTION:
+- Change the heading between <h3> and </h3>
+- Change the description between <p> and </p>
+- The button automatically goes to the contact page
+
+FORMATTING DATES AND TIMES
+--------------------------
+
+RECOMMENDED DATE FORMATS:
+- Specific date: "Saturday, March 15, 2025"
+- Recurring: "First Saturday of each month"
+- Date range: "March 15-17, 2025"
+
+RECOMMENDED TIME FORMATS:
+- "10:00 AM - 12:00 PM"
+- "6:00 PM - 9:00 PM"
+- "All day event"
+
+LOCATION EXAMPLES:
+- "Community Center, 123 Main Street"
+- "Online via Zoom (link provided upon registration)"
+- "City Hall, Conference Room A"
+- "Member's home (address provided to attendees)"
+
+COMPLETE EXAMPLE - EVENTS CONTAINER
+----------------------------------
+
+<div class="events-container">
+    <div class="event-card">
+        <h3>Monthly Meeting</h3>
+        <p class="event-date"><strong>Date:</strong> First Saturday of each month</p>
+        <p class="event-time"><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+        <p class="event-location"><strong>Location:</strong> Community Center, Main Street</p>
+        <p>Join us for our monthly meeting to discuss party business, upcoming events, and community initiatives. All members and interested community members are welcome.</p>
+    </div>
+
+    <div class="event-card">
+        <h3>Volunteer Training Workshop</h3>
+        <p class="event-date"><strong>Date:</strong> Saturday, February 22, 2025</p>
+        <p class="event-time"><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+        <p class="event-location"><strong>Location:</strong> Public Library, Meeting Room B</p>
+        <p>Learn effective volunteer strategies, communication skills, and how to engage with community members. Perfect for new volunteers or those looking to enhance their skills.</p>
+    </div>
+
+    <div class="event-card">
+        <h3>Community Cleanup Day</h3>
+        <p class="event-date"><strong>Date:</strong> Saturday, April 5, 2025</p>
+        <p class="event-time"><strong>Time:</strong> 9:00 AM - 1:00 PM</p>
+        <p class="event-location"><strong>Location:</strong> Riverside Park</p>
+        <p>Join Kentucky Party members and community volunteers for a day of environmental stewardship. We'll provide supplies, just bring your enthusiasm and work gloves!</p>
+    </div>
+</div>
+
+ORGANIZING EVENTS
+----------------
+
+CHRONOLOGICAL ORDER:
+- List events in date order (earliest first)
+- This helps visitors find upcoming events quickly
+
+RECURRING VS. ONE-TIME EVENTS:
+- Put recurring events (like monthly meetings) at the top
+- Follow with specific upcoming events
+- Remove past events regularly
+
+EVENT CATEGORIES TO CONSIDER:
+- Regular meetings
+- Training/educational events
+- Community service projects
+- Fundraising events
+- Social gatherings
+- Political/advocacy events
+
+TROUBLESHOOTING
+--------------
+
+PROBLEM: Event information doesn't display correctly
+SOLUTION:
+- Check that all HTML tags are properly closed
+- Make sure <strong> tags are used for "Date:", "Time:", "Location:"
+- Verify that text is between the correct tags
+
+PROBLEM: Events appear in wrong order or layout is broken
+SOLUTION:
+- Check that each event is properly contained within <div class="event-card">
+- Make sure all events are inside the <div class="events-container">
+- Verify that you didn't accidentally delete structural HTML
+
+PROBLEM: New event doesn't appear
+SOLUTION:
+- Make sure you added the event inside the events-container section
+- Check that the HTML structure is complete
+- Verify you saved the file after making changes
+
+PROBLEM: Event formatting looks different from others
+SOLUTION:
+- Make sure you're using the same class names (event-date, event-time, event-location)
+- Check that the HTML structure matches existing events exactly
+- Verify that <strong> tags are used consistently
+
+BEST PRACTICES
+--------------
+
+KEEP INFORMATION CURRENT:
+- Remove past events regularly
+- Update recurring event details if they change
+- Add new events as soon as they're scheduled
+
+BE SPECIFIC:
+- Include complete addresses when possible
+- Specify if registration is required
+- Mention if events are free or have costs
+- Include contact information for questions
+
+USE CLEAR LANGUAGE:
+- Write descriptions that anyone can understand
+- Include what attendees should bring or expect
+- Mention if the event is open to the public or members only
+
+TESTING CHECKLIST
+-----------------
+After making event changes, test:
+
+□ All event information displays correctly
+□ Dates and times are clearly readable
+□ Event descriptions are complete and clear
+□ Layout looks good on desktop
+□ Layout looks good on mobile (narrow browser window)
+□ No HTML errors or broken formatting
+□ Events are in logical order (usually chronological)
+□ Contact button in signup section works
+
+TIPS FOR SUCCESS
+---------------
+- Always make a backup copy of events.html before editing
+- Update events regularly to keep information current
+- Use consistent formatting for dates and times
+- Test your changes in a web browser after saving
+- Consider the audience - write for community members who may not know party jargon
+
+Remember: Keep event information accurate and up-to-date. This page is often the first place people look for ways to get involved with the Kentucky Party!
