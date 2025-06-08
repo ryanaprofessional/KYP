@@ -61,6 +61,11 @@
         height: 150px;
     }
 
+    /* Hide hover overlay on mobile since touch devices don't have hover */
+    .image-overlay {
+        display: none;
+    }
+
     /* Modal responsive */
     .modal-content {
         width: 95%;
