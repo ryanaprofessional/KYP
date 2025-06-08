@@ -1,0 +1,573 @@
+ADDING NEW PAGES TO THE WEBSITE
+==================================
+
+OVERVIEW
+--------
+This guide shows you how to add completely new pages to the Kentucky Party website. When you add a new page, you need to:
+1. Create the new HTML file
+2. Update the navigation menu on ALL existing pages
+3. Test the new page and navigation links
+
+This guide includes step-by-step instructions and examples for common types of pages you might want to add.
+
+UNDERSTANDING THE CURRENT NAVIGATION
+------------------------------------
+
+CURRENT MENU STRUCTURE:
+The website currently has these pages in the navigation:
+- About (index.html) - Home page with committees and documents
+- Contact (contact.html) - Contact information and form
+- Events (events.html) - Upcoming events and meetings
+- Resources (resources.html) - Meeting minutes and other resources
+- Store (store.html) - Merchandise and fundraising items
+- Donate (external link) - GoFundMe campaign link
+
+NAVIGATION CODE LOCATION:
+The navigation menu appears in EVERY HTML file. It's located near the top of each file between the <nav> tags.
+
+EXAMPLE NAVIGATION CODE (from index.html):
+<nav class="navigation">
+    <div class="menu-header">
+        <a href="index.html" class="brand">The Kentucky Party</a>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+    
+    <ul class="menu" id="menu">
+        <li class="menu-item">
+            <a href="index.html" class="menu-link">About</a>
+        </li>
+        <li class="menu-item">
+            <a href="contact.html" class="menu-link">Contact</a>
+        </li>
+        <li class="menu-item">
+            <a href="events.html" class="menu-link">Events</a>
+        </li>
+        <li class="menu-item">
+            <a href="resources.html" class="menu-link">Resources</a>
+        </li>
+        <li class="menu-item">
+            <a href="store.html" class="menu-link">Store</a>
+        </li>
+        <li class="menu-item">
+            <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+        </li>
+    </ul>
+</nav>
+
+WHAT THIS MEANS:
+- Each <li class="menu-item"> creates one menu button
+- The <a href="filename.html"> part links to the page file
+- The text between <a> and </a> is what appears on the button
+- target="_blank" makes external links open in new tabs
+
+STEP-BY-STEP: ADDING A NEW PAGE
+-------------------------------
+
+EXAMPLE: Adding a "News" page
+
+STEP 1: CREATE THE NEW HTML FILE
+1. Copy an existing HTML file (like contact.html) as your starting template
+2. Rename the copy to your new page name (like "news.html")
+3. Edit the content to match your new page purpose
+
+STEP 2: UPDATE THE NEW FILE'S CONTENT
+Open news.html in a text editor and make these changes:
+
+CHANGE THE TITLE (in the <head> section):
+FROM: <title>Kentucky Party - Contact | Official Website</title>
+TO:   <title>Kentucky Party - News | Official Website</title>
+
+CHANGE THE META DESCRIPTION:
+FROM: <meta name="description" content="Contact The Kentucky Party...">
+TO:   <meta name="description" content="Latest news and updates from The Kentucky Party...">
+
+CHANGE THE MAIN CONTENT:
+Replace everything between <main class="page-wrapper"> and </main> with your new content.
+
+STEP 3: ADD THE NEW PAGE TO ALL NAVIGATION MENUS
+You must update the navigation in EVERY HTML file:
+- index.html
+- contact.html
+- events.html
+- resources.html
+- store.html
+- news.html (your new file)
+
+In each file, find the <ul class="menu" id="menu"> section and add your new menu item.
+
+ADD THIS LINE (in the appropriate position):
+<li class="menu-item">
+    <a href="news.html" class="menu-link">News</a>
+</li>
+
+STEP 4: TEST YOUR NEW PAGE
+1. Open index.html in your web browser
+2. Click the new "News" button in the navigation
+3. Verify it opens your new page
+4. Test the navigation from your new page back to other pages
+5. Test on mobile (resize browser window to check hamburger menu)
+
+COMPLETE EXAMPLE: CREATING A NEWS PAGE
+-------------------------------------
+
+NEW FILE: news.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kentucky Party - News | Official Website</title>
+    <meta name="description" content="Latest news and updates from The Kentucky Party. Stay informed about our activities, announcements, and political developments.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thekentuckyparty.com/news.html">
+    <meta property="og:title" content="Kentucky Party - News | Official Website">
+    <meta property="og:description" content="Latest news and updates from The Kentucky Party. Stay informed about our activities, announcements, and political developments.">
+    <meta property="og:image" content="https://thekentuckyparty.com/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thekentuckyparty.com/news.html">
+    <meta property="twitter:title" content="Kentucky Party - News | Official Website">
+    <meta property="twitter:description" content="Latest news and updates from The Kentucky Party. Stay informed about our activities, announcements, and political developments.">
+    <meta property="twitter:image" content="https://thekentuckyparty.com/images/logo.png">
+    
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="menu-header">
+            <a href="index.html" class="brand">The Kentucky Party</a>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <ul class="menu" id="menu">
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a href="events.html" class="menu-link">Events</a>
+            </li>
+            <li class="menu-item">
+                <a href="news.html" class="menu-link">News</a>
+            </li>
+            <li class="menu-item">
+                <a href="resources.html" class="menu-link">Resources</a>
+            </li>
+            <li class="menu-item">
+                <a href="store.html" class="menu-link">Store</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank">
+                <img src="images/logo.png" alt="Kentucky Party Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Page Header -->
+        <section class="content-section">
+            <h1 class="main-heading">News & Updates</h1>
+            <div class="divider"></div>
+        </section>
+
+        <!-- News Articles -->
+        <section class="content-section">
+            <h2 class="sub-heading">Latest News</h2>
+            
+            <article class="news-article">
+                <h3>Kentucky Party Announces New Initiative</h3>
+                <p class="news-date">January 15, 2025</p>
+                <p>The Kentucky Party is pleased to announce our new community outreach initiative aimed at increasing local political engagement...</p>
+            </article>
+            
+            <div class="divider"></div>
+            
+            <article class="news-article">
+                <h3>Upcoming Town Hall Meeting</h3>
+                <p class="news-date">January 10, 2025</p>
+                <p>Join us for our monthly town hall meeting where we'll discuss current issues affecting Kentucky communities...</p>
+            </article>
+            
+            <div class="divider"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 The Kentucky Party. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+UPDATING NAVIGATION IN ALL EXISTING FILES
+-----------------------------------------
+
+You need to add the News menu item to these files:
+
+FILES TO UPDATE:
+- index.html
+- contact.html
+- events.html
+- resources.html
+- store.html
+
+IN EACH FILE, FIND THIS SECTION:
+<ul class="menu" id="menu">
+    <li class="menu-item">
+        <a href="index.html" class="menu-link">About</a>
+    </li>
+    <li class="menu-item">
+        <a href="contact.html" class="menu-link">Contact</a>
+    </li>
+    <li class="menu-item">
+        <a href="events.html" class="menu-link">Events</a>
+    </li>
+    <li class="menu-item">
+        <a href="resources.html" class="menu-link">Resources</a>
+    </li>
+    <li class="menu-item">
+        <a href="store.html" class="menu-link">Store</a>
+    </li>
+    <li class="menu-item">
+        <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+    </li>
+</ul>
+
+ADD THE NEWS ITEM (after Events, before Resources):
+<ul class="menu" id="menu">
+    <li class="menu-item">
+        <a href="index.html" class="menu-link">About</a>
+    </li>
+    <li class="menu-item">
+        <a href="contact.html" class="menu-link">Contact</a>
+    </li>
+    <li class="menu-item">
+        <a href="events.html" class="menu-link">Events</a>
+    </li>
+    <li class="menu-item">
+        <a href="news.html" class="menu-link">News</a>
+    </li>
+    <li class="menu-item">
+        <a href="resources.html" class="menu-link">Resources</a>
+    </li>
+    <li class="menu-item">
+        <a href="store.html" class="menu-link">Store</a>
+    </li>
+    <li class="menu-item">
+        <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+    </li>
+</ul>
+
+MENU ORDER RECOMMENDATIONS
+--------------------------
+
+LOGICAL ORDER FOR MENU ITEMS:
+1. About (index.html) - Always first, this is the home page
+2. News (news.html) - Current updates and announcements
+3. Events (events.html) - Upcoming activities
+4. Resources (resources.html) - Documents and meeting minutes
+5. Contact (contact.html) - How to reach the party
+6. Store (store.html) - Merchandise and fundraising
+7. Donate (external link) - Always last, this is the main call-to-action
+
+WHY THIS ORDER WORKS:
+- About introduces visitors to the party
+- News keeps them informed of current activities
+- Events shows how to get involved
+- Resources provides deeper information
+- Contact enables communication
+- Store and Donate facilitate support
+
+COMMON PAGE TYPES AND TEMPLATES
+-------------------------------
+
+NEWS/BLOG PAGE:
+Use article tags for individual news items:
+<article class="news-article">
+    <h3>Article Title</h3>
+    <p class="news-date">Date</p>
+    <p>Article content...</p>
+</article>
+
+INFORMATION PAGE:
+Use sections for different topics:
+<section class="content-section">
+    <h2 class="sub-heading">Section Title</h2>
+    <p>Information content...</p>
+    <div class="divider"></div>
+</section>
+
+LIST PAGE:
+Use the committee-grid class for card layouts:
+<div class="committee-grid">
+    <div class="member-card">
+        <div class="member-info">
+            <h3 class="member-name">Item Title</h3>
+            <p class="member-role">Item Description</p>
+        </div>
+    </div>
+</div>
+
+FORM PAGE:
+Copy the structure from contact.html for forms with input fields.
+
+REQUIRED ELEMENTS FOR ALL PAGES
+-------------------------------
+
+EVERY NEW PAGE MUST INCLUDE:
+
+1. PROPER DOCTYPE AND HTML STRUCTURE:
+<!DOCTYPE html>
+<html lang="en">
+
+2. COMPLETE HEAD SECTION:
+- Meta charset and viewport
+- Unique title and description
+- Open Graph and Twitter meta tags
+- Link to styles/main.css
+
+3. NAVIGATION SECTION:
+- Complete navigation with ALL menu items
+- Hamburger menu button for mobile
+
+4. MAIN CONTENT WRAPPER:
+<main class="page-wrapper">
+    <!-- Your content here -->
+</main>
+
+5. LOGO CONTAINER:
+<div class="logo-container">
+    <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank">
+        <img src="images/logo.png" alt="Kentucky Party Logo" class="logo">
+    </a>
+</div>
+
+6. FOOTER:
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 The Kentucky Party. All rights reserved.</p>
+    </div>
+</footer>
+
+7. SCRIPT REFERENCE:
+<script src="script.js"></script>
+
+CUSTOMIZING META TAGS FOR NEW PAGES
+-----------------------------------
+
+FOR EACH NEW PAGE, UPDATE THESE META TAGS:
+
+TITLE TAG:
+<title>Kentucky Party - [Page Name] | Official Website</title>
+
+DESCRIPTION:
+<meta name="description" content="[Describe what this page contains - keep under 160 characters]">
+
+OPEN GRAPH URL:
+<meta property="og:url" content="https://thekentuckyparty.com/[filename].html">
+
+TWITTER URL:
+<meta property="twitter:url" content="https://thekentuckyparty.com/[filename].html">
+
+OPEN GRAPH TITLE:
+<meta property="og:title" content="Kentucky Party - [Page Name] | Official Website">
+
+TWITTER TITLE:
+<meta property="twitter:title" content="Kentucky Party - [Page Name] | Official Website">
+
+OPEN GRAPH DESCRIPTION:
+<meta property="og:description" content="[Same as meta description]">
+
+TWITTER DESCRIPTION:
+<meta property="twitter:description" content="[Same as meta description]">
+
+EXAMPLE FOR NEWS PAGE:
+<title>Kentucky Party - News | Official Website</title>
+<meta name="description" content="Latest news and updates from The Kentucky Party. Stay informed about our activities, announcements, and political developments.">
+<meta property="og:url" content="https://thekentuckyparty.com/news.html">
+<meta property="og:title" content="Kentucky Party - News | Official Website">
+<meta property="og:description" content="Latest news and updates from The Kentucky Party. Stay informed about our activities, announcements, and political developments.">
+
+TESTING YOUR NEW PAGE
+---------------------
+
+DESKTOP TESTING CHECKLIST:
+□ Page loads without errors
+□ Navigation menu displays correctly
+□ All navigation links work (test each one)
+□ Logo displays and links to donation page
+□ Content displays properly
+□ Footer appears at bottom
+□ Page title shows correctly in browser tab
+
+MOBILE TESTING CHECKLIST:
+□ Hamburger menu button appears on small screens
+□ Hamburger menu opens and closes properly
+□ Navigation links work in mobile menu
+□ Content is readable on small screens
+□ Logo scales appropriately
+□ No horizontal scrolling issues
+
+BROWSER TESTING:
+Test your new page in multiple browsers:
+□ Chrome
+□ Firefox
+□ Safari (if available)
+□ Edge
+
+LINK TESTING:
+From your new page, test links to:
+□ Home page (About)
+□ Contact page
+□ Events page
+□ Resources page
+□ Store page
+□ External donation link
+
+TROUBLESHOOTING COMMON ISSUES
+-----------------------------
+
+PROBLEM: Navigation menu doesn't work on new page
+SOLUTION:
+- Check that script.js is properly linked: <script src="script.js"></script>
+- Verify the hamburger button has onclick="toggleMenu()"
+- Make sure the menu has id="menu"
+
+PROBLEM: New page doesn't appear in navigation on other pages
+SOLUTION:
+- You must add the menu item to ALL existing HTML files
+- Check that you updated every file's navigation section
+- Verify the href points to the correct filename
+
+PROBLEM: Styling looks different on new page
+SOLUTION:
+- Check that styles/main.css is properly linked
+- Verify you're using the correct CSS classes
+- Make sure the page structure matches other pages
+
+PROBLEM: Logo or images don't display
+SOLUTION:
+- Check that image paths are correct (images/logo.png)
+- Verify image files exist in the images folder
+- Make sure file names match exactly (case-sensitive)
+
+PROBLEM: Page doesn't work on mobile
+SOLUTION:
+- Check that viewport meta tag is included
+- Verify hamburger menu JavaScript is working
+- Test responsive CSS classes are applied
+
+ADVANCED: ADDING SUBPAGES
+------------------------
+
+If you want to create subpages (like news/article1.html), you need to:
+
+1. CREATE A SUBFOLDER:
+Create a folder like "news" in your main directory
+
+2. UPDATE FILE PATHS:
+In subpages, update paths to go up one level:
+- href="../index.html" instead of href="index.html"
+- src="../images/logo.png" instead of src="images/logo.png"
+- href="../styles/main.css" instead of href="styles/main.css"
+- src="../script.js" instead of src="script.js"
+
+3. UPDATE NAVIGATION:
+Main pages link to subpages: href="news/article1.html"
+Subpages link to main pages: href="../index.html"
+
+EXAMPLE SUBFOLDER STRUCTURE:
+new-site/
+├── index.html
+├── contact.html
+├── events.html
+├── resources.html
+├── store.html
+├── news.html
+├── news/
+│   ├── article1.html
+│   ├── article2.html
+│   └── article3.html
+├── images/
+├── styles/
+└── script.js
+
+BEST PRACTICES FOR NEW PAGES
+----------------------------
+
+CONTENT ORGANIZATION:
+- Keep content focused and relevant to the page purpose
+- Use clear headings and sections
+- Include dividers between major sections
+- Maintain consistent formatting with existing pages
+
+FILE NAMING:
+- Use lowercase letters
+- Use hyphens instead of spaces
+- Keep names short but descriptive
+- Examples: news.html, volunteer.html, policy-positions.html
+
+NAVIGATION MANAGEMENT:
+- Don't add too many top-level pages (max 7-8 items)
+- Consider subpages for related content
+- Keep menu order logical and user-friendly
+- Test navigation on both desktop and mobile
+
+CONTENT UPDATES:
+- Keep new pages current and relevant
+- Remove outdated information promptly
+- Maintain consistent tone and style
+- Include calls-to-action where appropriate
+
+SEO CONSIDERATIONS:
+- Write unique, descriptive page titles
+- Create compelling meta descriptions
+- Use proper heading hierarchy (h1, h2, h3)
+- Include relevant keywords naturally
+
+MAINTENANCE CHECKLIST
+---------------------
+
+AFTER ADDING A NEW PAGE:
+□ Test all navigation links from all pages
+□ Verify mobile responsiveness
+□ Check that meta tags are unique and accurate
+□ Confirm page loads quickly
+□ Test external links (like donation button)
+□ Validate HTML if possible
+□ Update any site documentation
+
+REGULAR MAINTENANCE:
+□ Keep content current and accurate
+□ Remove outdated pages when no longer needed
+□ Update navigation if page purposes change
+□ Monitor page loading speeds
+□ Check for broken links periodically
+
+Remember: Every new page should serve a clear purpose and provide value to visitors. Don't add pages just to have more content - focus on quality and usefulness!

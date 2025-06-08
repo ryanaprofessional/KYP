@@ -18,6 +18,7 @@ Read these files in order:
 05-managing-events.txt      - Adding and updating events
 06-managing-minutes.txt     - Adding meeting minutes
 07-updating-documents.txt   - Updating bylaws and platform links
+08-adding-new-pages.txt     - Creating new pages and updating navigation
 
 QUICK START GUIDE
 ----------------
