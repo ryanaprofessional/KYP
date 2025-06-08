@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kentucky Party - Store | Shirts & Merchandise</title>
+    <meta name="description" content="Shop Kentucky Party shirts and merchandise. Support the party by purchasing our exclusive designs. All purchases are made through our donation page.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thekentuckyparty.com/store.html">
+    <meta property="og:title" content="Kentucky Party - Store | Shirts & Merchandise">
+    <meta property="og:description" content="Shop Kentucky Party shirts and merchandise. Support the party by purchasing our exclusive designs. All purchases are made through our donation page.">
+    <meta property="og:image" content="https://thekentuckyparty.com/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thekentuckyparty.com/store.html">
+    <meta property="twitter:title" content="Kentucky Party - Store | Shirts & Merchandise">
+    <meta property="twitter:description" content="Shop Kentucky Party shirts and merchandise. Support the party by purchasing our exclusive designs. All purchases are made through our donation page.">
+    <meta property="twitter:image" content="https://thekentuckyparty.com/images/logo.png">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="menu-header">
+            <a href="index.html" class="brand">The Kentucky Party</a>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <ul class="menu" id="menu">
+            <li class="menu-item">
+                <a href="index.html" class="menu-link">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="contact.html" class="menu-link">Contact</a>
+            </li>
+            <li class="menu-item">
+                <a href="events.html" class="menu-link">Events</a>
+            </li>
+            <li class="menu-item">
+                <a href="resources.html" class="menu-link">Resources</a>
+            </li>
+            <li class="menu-item">
+                <a href="store.html" class="menu-link">Store</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank" class="menu-link">Donate</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <a href="https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y" target="_blank">
+                <img src="images/logo.png" alt="Kentucky Party Logo" class="logo">
+            </a>
+        </div>
+
+        <h1 class="sub-heading">Kentucky Party Store</h1>
+        
+        <section class="content-section">
+            <div class="store-notice">
+                <h3>How to Purchase</h3>
+                <p>We currently accept purchases through our donation page. Click on any item below to be directed to our donation page where you can support the Kentucky Party and request your merchandise.</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h2 class="store-section-title">Shirts</h2>
+            <p>Show your support with our exclusive Kentucky Party shirt designs.</p>
+            
+            <div class="store-grid">
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/kyp.png" alt="KYP Shirt" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">KYP Shirt</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_-_Deer.png" alt="KYP Deer Design" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">KYP Deer Design</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_-_Groundhog.png" alt="KYP Groundhog Design" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">KYP Groundhog Design</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_-_Keep_KY_Clean.png" alt="Keep KY Clean" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">Keep KY Clean</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_-_Peace_n_Pride.png" alt="Peace & Pride" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">Peace & Pride</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_KY_First.png" alt="KY First" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">KY First</h4>
+                </div>
+                
+                <div class="store-card" onclick="goToDonate()">
+                    <div class="store-image-container">
+                        <img src="images/store/KYP_Strong_Bourbon.png" alt="Strong Bourbon" class="store-image">
+                    </div>
+                    <h4 class="store-item-title">Strong Bourbon</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 The Kentucky Party. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

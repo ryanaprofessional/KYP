@@ -20,6 +20,11 @@ function openPlatformPdf() {
     alert('Platform PDF will be available soon. Please check back later.');
 }
 
+// Redirect to donation page for store purchases
+function goToDonate() {
+    window.open('https://www.gofundme.com/f/kentucky-requires-rational-and-honest-local-representation?lid=9vrqjj6iqr2y', '_blank');
+}
+
 // Close mobile menu when clicking on a link (for better UX)
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('.menu-link');
