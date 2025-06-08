@@ -79,53 +79,95 @@
             <p>Show your support with our exclusive Kentucky Party shirt designs.</p>
             
             <div class="store-grid">
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/kyp.png', 'KYP Shirt')">
                         <img src="images/store/kyp.png" alt="KYP Shirt" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">KYP Shirt</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">KYP Shirt</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_-_Deer.png', 'KYP Deer Design')">
                         <img src="images/store/KYP_-_Deer.png" alt="KYP Deer Design" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">KYP Deer Design</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">KYP Deer Design</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_-_Groundhog.png', 'KYP Groundhog Design')">
                         <img src="images/store/KYP_-_Groundhog.png" alt="KYP Groundhog Design" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">KYP Groundhog Design</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">KYP Groundhog Design</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_-_Keep_KY_Clean.png', 'Keep KY Clean')">
                         <img src="images/store/KYP_-_Keep_KY_Clean.png" alt="Keep KY Clean" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">Keep KY Clean</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">Keep KY Clean</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_-_Peace_n_Pride.png', 'Peace & Pride')">
                         <img src="images/store/KYP_-_Peace_n_Pride.png" alt="Peace & Pride" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">Peace & Pride</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">Peace & Pride</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_KY_First.png', 'KY First')">
                         <img src="images/store/KYP_KY_First.png" alt="KY First" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">KY First</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">KY First</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
                 
-                <div class="store-card" onclick="goToDonate()">
-                    <div class="store-image-container">
+                <div class="store-card">
+                    <div class="store-image-container" onclick="openImageModal('images/store/KYP_Strong_Bourbon.png', 'Strong Bourbon')">
                         <img src="images/store/KYP_Strong_Bourbon.png" alt="Strong Bourbon" class="store-image">
+                        <div class="image-overlay">
+                            <span class="view-fullscreen">🔍 View Full Size</span>
+                        </div>
                     </div>
-                    <h4 class="store-item-title">Strong Bourbon</h4>
+                    <div class="store-card-content">
+                        <h4 class="store-item-title">Strong Bourbon</h4>
+                        <button class="purchase-btn" onclick="goToDonate()">Purchase</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,6 +179,17 @@
             <p>&copy; 2025 The Kentucky Party. All rights reserved.</p>
         </div>
     </footer>
+<!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div class="modal-caption">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-purchase-btn" onclick="goToDonate()">Purchase This Design</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
